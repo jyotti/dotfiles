@@ -20,7 +20,6 @@ NeoBundle 'Shougo/vimproc'
 NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'Lokaltog/vim-easymotion'
 NeoBundle 'rstacruz/sparkup', {'rtp': 'vim/'}
-
 NeoBundle 'altercation/solarized'
 
 " vim-scripts repos
@@ -28,10 +27,10 @@ NeoBundle 'L9'
 NeoBundle 'FuzzyFinder'
 NeoBundle 'rails.vim'
 " Non github repos
-NeoBundle 'git://git.wincent.com/command-t.git'
+"" NeoBundle 'git://git.wincent.com/command-t.git'
 " Non git repos
-NeoBundle 'http://svn.macports.org/repository/macports/contrib/mpvim/'
-" NeoBundle 'https://bitbucket.org/ns9tks/vim-fuzzyfinder'
+"" NeoBundle 'http://svn.macports.org/repository/macports/contrib/mpvim/'
+"" NeoBundle 'https://bitbucket.org/ns9tks/vim-fuzzyfinder'
 
 filetype plugin indent on     " Required!
 "
@@ -42,18 +41,6 @@ filetype plugin indent on     " Required!
 " Installation check.
 NeoBundleCheck
 
-" auto load configures
-runtime! userautoload/*.vim
-
-"Solarized configure
-syntax enable
-set background=dark
-colorscheme solarized
-
-if has('gui_running')
-	set background=light
-else
-	set background=dark
-endif
-
-
+source ~/.vim/userautoload/basic.vim
+source ~/.vim/userautoload/color.vim
+source ~/.vim/userautoload/editor.vim
