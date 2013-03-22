@@ -17,6 +17,7 @@ NeoBundle 'Shougo/vimproc'
 "
 " Note: You don't set neobundle setting in .gvimrc!
 " Original repos on github
+"" vim git wrapper
 NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'Lokaltog/vim-easymotion'
 NeoBundle 'rstacruz/sparkup', {'rtp': 'vim/'}
@@ -44,3 +45,4 @@ NeoBundleCheck
 source ~/.vim/userautoload/basic.vim
 source ~/.vim/userautoload/color.vim
 source ~/.vim/userautoload/editor.vim
+source ~/.vim/userautoload/search.vim
