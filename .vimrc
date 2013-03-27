@@ -21,7 +21,13 @@ NeoBundle 'Shougo/vimproc'
 NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'Lokaltog/vim-easymotion'
 NeoBundle 'rstacruz/sparkup', {'rtp': 'vim/'}
+" color!!
 NeoBundle 'altercation/solarized'
+" contents assist
+NeoBundle 'Shougo/neocomplcache'
+" html/css helper
+NeoBundle 'mattn/zencoding-vim'
+NeoBundle 'scrooloose/nerdtree'
 
 " vim-scripts repos
 NeoBundle 'L9'
@@ -42,6 +48,10 @@ filetype plugin indent on     " Required!
 " Installation check.
 NeoBundleCheck
 
+" neocomplcache
+let g:neocomplcache_enable_at_startup = 1
+
+" load configs...
 source ~/.vim/userautoload/basic.vim
 source ~/.vim/userautoload/color.vim
 source ~/.vim/userautoload/editor.vim
