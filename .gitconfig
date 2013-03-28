@@ -1,0 +1,13 @@
+[user]
+	name = Atsushi Nakajyo
+	email = jyotti@gmail.com
+[color]
+    status = auto
+    diff = auto
+    branch = auto
+    interactive = auto
+    grep = auto
+[core]
+    editor = vim
+[merge]
+    tool = vimdiff
