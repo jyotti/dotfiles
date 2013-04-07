@@ -1,6 +1,6 @@
 [user]
-	name = Atsushi Nakajyo
-	email = jyotti@gmail.com
+    name = Atsushi Nakajyo
+    email = jyotti@gmail.com
 [color]
     status = auto
     diff = auto
@@ -11,3 +11,5 @@
     editor = vim
 [merge]
     tool = vimdiff
+[push]
+    default = tracking
