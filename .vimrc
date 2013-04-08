@@ -28,7 +28,8 @@ NeoBundle 'Shougo/neocomplcache'
 " html/css helper
 NeoBundle 'mattn/zencoding-vim'
 NeoBundle 'scrooloose/nerdtree'
-
+" colorful status line
+NeoBundle 'Lokaltog/vim-powerline'
 " vim-scripts repos
 NeoBundle 'L9'
 NeoBundle 'FuzzyFinder'
