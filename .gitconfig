@@ -9,7 +9,9 @@
     grep = auto
 [core]
     editor = vim
+    excludesfile = ~/.gitignore
 [merge]
     tool = vimdiff
+    ff = false
 [push]
-    default = upstream
+    default = upstream #defaultはtarackingしているブランチ
