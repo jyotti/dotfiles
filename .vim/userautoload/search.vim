@@ -7,5 +7,5 @@ set smartcase  " 検索文字列に大文字が含まれている場合は区別
 set incsearch  " インクリメンタルサーチ
 set hlsearch   " 検索文字をハイライト
 "Escの2回押しでハイライト消去
-"nmap ;nohlsearch
+nmap <Esc><Esc> :nohlsearch<CR><Esc>
 
