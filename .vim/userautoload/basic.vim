@@ -71,3 +71,5 @@ set ttymouse=xterm2
 "ヤンクした文字は、システムのクリップボードに入れる
 " set clipboard=unnamed
 
+" ペースト時にautoindentを無効に
+""set paste

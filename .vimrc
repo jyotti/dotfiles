@@ -19,21 +19,32 @@ NeoBundle 'Shougo/vimproc'
 " Original repos on github
 "" vim git wrapper
 NeoBundle 'tpope/vim-fugitive'
+"" カーソル移動のヘルパー
 NeoBundle 'Lokaltog/vim-easymotion'
-NeoBundle 'rstacruz/sparkup', {'rtp': 'vim/'}
+"""NeoBundle 'rstacruz/sparkup', {'rtp': 'vim/'}
 " color!!
 NeoBundle 'altercation/solarized'
 " contents assist
 NeoBundle 'Shougo/neocomplcache'
 " html/css helper
-NeoBundle 'mattn/zencoding-vim'
+" zencoding
+NeoBundle 'mattn/emmet-vim'
+NeoBundle 'tpope/vim-surround'
 NeoBundle 'scrooloose/nerdtree'
+" open link at default browser!
+NeoBundle 'open-browser.vim'
+" カーソル下のURLを「gx」で開く
+" " http://vim-users.jp/2011/08/hack225/
+let g:netrw_nogx = 1 " disable netrw's gx mapping.
+nmap gx <Plug>(openbrowser-smart-search)
+vmap gx <Plug>(openbrowser-smart-search)
+
 " colorful status line
 NeoBundle 'Lokaltog/vim-powerline'
 " vim-scripts repos
-NeoBundle 'L9'
-NeoBundle 'FuzzyFinder'
-NeoBundle 'rails.vim'
+""NeoBundle 'L9'
+""NeoBundle 'FuzzyFinder'
+""NeoBundle 'rails.vim'
 " Non github repos
 "" NeoBundle 'git://git.wincent.com/command-t.git'
 " Non git repos
@@ -57,3 +68,4 @@ source ~/.vim/userautoload/basic.vim
 source ~/.vim/userautoload/color.vim
 source ~/.vim/userautoload/editor.vim
 source ~/.vim/userautoload/search.vim
+source ~/.vim/userautoload/mapping.vim

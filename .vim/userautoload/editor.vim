@@ -78,3 +78,9 @@ augroup END
 :hi clear CursorLine
 :hi CursorLine gui=underline
 highlight CursorLine ctermbg=black guibg=black
+
+"-------------------------------------------------
+" yank and paste
+"-------------------------------------------------
+" ノーマルモード時に自動でペーストモードを解除する
+""autocmd InsertLeave * set nopaste
