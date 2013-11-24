@@ -18,13 +18,15 @@ shopt -s histappend
 # Autocorrect typos in path names when using `cd`
 shopt -s cdspell
 
-# HomeBrew
-source `brew --repository`/Library/Contributions/brew_bash_completion.sh
-## brew installs
-### bash_completion
+#THIS MUST BE AT THE END OF THE FILE FOR GVM TO WORK!!!
+[[ -s "$HOME/.gvm/bin/gvm-init.sh" ]] && source "$HOME/.gvm/bin/gvm-init.sh"
+
+# bash_completion
 if [ -f $(brew --prefix)/etc/bash_completion ]; then
   . $(brew --prefix)/etc/bash_completion
 fi
-
-#THIS MUST BE AT THE END OF THE FILE FOR GVM TO WORK!!!
-[[ -s "/Users/jyotti/.gvm/bin/gvm-init.sh" ]] && source "/Users/jyotti/.gvm/bin/gvm-init.sh"
+## - completions...
+## -- HomeBrew
+if [ -f $(brew --prefix)/Library/Contributions/brew_bash_completion.sh ]; then
+  . $(brew --prefix)/Library/Contributions/brew_bash_completion.sh
+fi
