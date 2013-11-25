@@ -39,6 +39,10 @@ let g:netrw_nogx = 1 " disable netrw's gx mapping.
 nmap gx <Plug>(openbrowser-smart-search)
 vmap gx <Plug>(openbrowser-smart-search)
 
+" syntax
+NeoBundle "pangloss/vim-javascript"
+NeoBundle 'hail2u/vim-css3-syntax'
+NeoBundle 'taichouchou2/html5.vim'
 " colorful status line
 NeoBundle 'Lokaltog/vim-powerline'
 " vim-scripts repos
