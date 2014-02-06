@@ -15,3 +15,5 @@
     ff = false
 [push]
     default = upstream #defaultはtarackingしているブランチ
+[alias]
+    s   = status --short --branch
