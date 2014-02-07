@@ -15,5 +15,8 @@
     ff = false
 [push]
     default = upstream #defaultはtarackingしているブランチ
+[pull]
+    rebaes = true
 [alias]
-    s   = status --short --branch
+    s   = status
+    ss  = status --short --branch        # statusをコンパクトに
