@@ -30,3 +30,8 @@ fi
 if [ -f $(brew --prefix)/Library/Contributions/brew_bash_completion.sh ]; then
   . $(brew --prefix)/Library/Contributions/brew_bash_completion.sh
 fi
+
+## --aws cli
+if type aws_completer > /dev/null 2>&1 ; then
+    complete -C aws_completer aws
+fi
