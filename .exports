@@ -22,10 +22,12 @@ export MANPAGER="less -X"
 export GREP_OPTIONS="--color=auto"
 
 # encoding java
-export _JAVA_OPTIONS='-Dfile.encoding=UTF-8'
+export _JAVA_OPTIONS="-Dfile.encoding=UTF-8"
 
 # Android-SDK
-export ANDROID_HOME=/usr/local/opt/android-sdk
+if [[ -d "/usr/local/opt/android-sdk" ]]; then
+    export ANDROID_HOME=/usr/local/opt/android-sdk
+fi
 
 # Vim Kaoriya
 ##export EDITOR=/Applications/MacVim.app/Contents/MacOS/Vim

@@ -1,0 +1,15 @@
+##alias vi='env LANG=ja_JP.UTF-8 /Applications/MacVim.app/Contents/MacOS/Vim "$@"'
+##alias vim='env_LANG=ja_JP.UTF-8 /Applications/MacVim.app/Contents/MacOS/Vim "$@"'
+
+# HomeBrew
+if type brew > /dev/null 2>&1; then
+    # brew completion
+    if [ -f $(brew --prefix)/Library/Contributions/brew_bash_completion.sh ]; then
+      . $(brew --prefix)/Library/Contributions/brew_bash_completion.sh
+    fi
+
+    # bash completion
+    if [ -f $(brew --prefix)/etc/bash_completion ]; then
+      . $(brew --prefix)/etc/bash_completion
+    fi
+fi

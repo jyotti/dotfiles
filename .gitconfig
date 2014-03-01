@@ -14,7 +14,7 @@
     tool = vimdiff
     ff = false
 [push]
-    default = upstream #defaultはtarackingしているブランチ
+    default = upstream
 [pull]
     rebaes = true
 [alias]
