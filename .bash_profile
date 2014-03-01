@@ -21,12 +21,5 @@ shopt -s cdspell
 #THIS MUST BE AT THE END OF THE FILE FOR GVM TO WORK!!!
 [[ -s "$HOME/.gvm/bin/gvm-init.sh" ]] && source "$HOME/.gvm/bin/gvm-init.sh"
 
-# bash_completion
-if [ -f $(brew --prefix)/etc/bash_completion ]; then
-  . $(brew --prefix)/etc/bash_completion
-fi
-## - completions...
-## -- HomeBrew
-if [ -f $(brew --prefix)/Library/Contributions/brew_bash_completion.sh ]; then
-  . $(brew --prefix)/Library/Contributions/brew_bash_completion.sh
-fi
+# osx?
+_isdarwin && source .osx
