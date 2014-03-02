@@ -45,10 +45,15 @@ NeoBundle 'hail2u/vim-css3-syntax'
 NeoBundle 'taichouchou2/html5.vim'
 " colorful status line
 NeoBundle 'Lokaltog/vim-powerline'
+
+" sudo  ### sudo:filename ###
+NeoBundle 'vim-scripts/sudo.vim'
+
 " vim-scripts repos
 ""NeoBundle 'L9'
 ""NeoBundle 'FuzzyFinder'
 ""NeoBundle 'rails.vim'
+
 " Non github repos
 "" NeoBundle 'git://git.wincent.com/command-t.git'
 " Non git repos
