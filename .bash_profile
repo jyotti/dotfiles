@@ -22,4 +22,4 @@ shopt -s cdspell
 [[ -s "$HOME/.gvm/bin/gvm-init.sh" ]] && source "$HOME/.gvm/bin/gvm-init.sh"
 
 # osx?
-_isdarwin && source .osx
+_isdarwin && source ~/.osx
