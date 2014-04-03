@@ -49,6 +49,8 @@ NeoBundle 'Lokaltog/vim-powerline'
 " sudo  ### sudo:filename ###
 NeoBundle 'vim-scripts/sudo.vim'
 
+" コマンドを連続実行 http://mba-hack.blogspot.jp/2013/02/vim-submode.html
+NeoBundle 'kana/vim-submode'
 " vim-scripts repos
 ""NeoBundle 'L9'
 ""NeoBundle 'FuzzyFinder'
@@ -78,3 +80,4 @@ source ~/.vim/userautoload/color.vim
 source ~/.vim/userautoload/editor.vim
 source ~/.vim/userautoload/search.vim
 source ~/.vim/userautoload/mapping.vim
+source ~/.vim/userautoload/extra.vim
