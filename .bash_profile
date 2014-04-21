@@ -21,5 +21,11 @@ shopt -s cdspell
 #THIS MUST BE AT THE END OF THE FILE FOR GVM TO WORK!!!
 [[ -s "$HOME/.gvm/bin/gvm-init.sh" ]] && source "$HOME/.gvm/bin/gvm-init.sh"
 
+#rbenv
+if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
+
+#awscli
+_type aws_completer &&  complete -C aws_completer aws
+
 # osx?
 _isdarwin && source ~/.osx
