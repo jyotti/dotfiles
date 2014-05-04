@@ -1,0 +1,57 @@
+if has('vim_starting')
+   set nocompatible               " vim only
+   " Required:
+   set runtimepath+=~/.vim/bundle/neobundle.vim/
+endif
+
+" Required:
+call neobundle#begin(expand('~/.vim/bundle/'))
+
+" Let NeoBundle manage NeoBundle
+" Required:
+NeoBundleFetch 'Shougo/neobundle.vim'
+
+" ----------- plugins ---------------
+
+" vimでの入力補完 必須!
+NeoBundle 'Shougo/neocomplcache'
+
+" vimでGitを操作する
+NeoBundle 'tpope/vim-fugitive'
+
+" NeoBundle 'Lokaltog/vim-easymotion'
+
+" zencoding <c-y>,
+NeoBundle 'mattn/emmet-vim'
+
+" テキストを括弧で囲んだり削除したり
+NeoBundle 'tpope/vim-surround'
+
+" NERDTree
+NeoBundle 'scrooloose/nerdtree'
+
+" --- color
+" solarized!  http://ethanschoonover.com/solarized
+NeoBundle 'altercation/vim-colors-solarized'
+
+" colorful status line
+NeoBundle 'Lokaltog/vim-powerline'
+
+" --- syntax
+NeoBundle "pangloss/vim-javascript"
+NeoBundle 'hail2u/vim-css3-syntax'
+NeoBundle 'taichouchou2/html5.vim'
+
+" コマンドを連続実行 http://mba-hack.blogspot.jp/2013/02/vim-submode.html
+NeoBundle 'kana/vim-submode'
+
+" ----------- plugins ---------------
+
+call neobundle#end()
+
+" Required:
+filetype plugin indent on
+
+" If there are uninstalled bundles found on startup,
+" this will conveniently prompt you to install them.
+NeoBundleCheck
