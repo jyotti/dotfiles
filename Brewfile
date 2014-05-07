@@ -1,4 +1,3 @@
-# core packages
 install ack
 install git
 install tig
@@ -19,3 +18,10 @@ install reattach-to-user-namespace
 # Ricty extra Formula
 tap sanemat/font
 install ricty
+
+# --- cask ---
+# cask 設定
+tap phinze/cask
+install brew-cask
+
+###cask install xxxx
