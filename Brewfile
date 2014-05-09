@@ -10,18 +10,29 @@ install pyenv
 install rbenv
 
 # SDKs
-###install awscli   #--- pip install
+###install awscli   #--- use pip
+# android
+install android-sdk
+install apktool
 
 # tmuxでクリップボードにコピー
 install reattach-to-user-namespace
 
-# Ricty extra Formula
+# ---------------------------- #
+# Add repo
+# ---------------------------- #
+tap homebrew/versions
+install play12
+
+# Ricty
 tap sanemat/font
 install ricty
 
-# --- cask ---
-# cask 設定
-tap phinze/cask
-install brew-cask
+# ---------------------------- #
+# Cask
+# ---------------------------- #
+install caskroom/cask/brew-cask
+tap caskroom/versions
 
-###cask install xxxx
+cask install vagrant
+cask install genymotion
