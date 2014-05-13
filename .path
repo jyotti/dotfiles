@@ -1,0 +1,8 @@
+#THIS MUST BE AT THE END OF THE FILE FOR GVM TO WORK!!!
+[[ -s "$HOME/.gvm/bin/gvm-init.sh" ]] && source "$HOME/.gvm/bin/gvm-init.sh"
+
+#rbenv
+if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
+
+#pyenv
+if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi

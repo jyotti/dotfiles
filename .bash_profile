@@ -4,7 +4,7 @@ export PATH="$HOME/bin:$PATH"
 # Load the shell dotfiles, and then some:
 # * ~/.path can be used to extend `$PATH`.
 # * ~/.extra can be used for other settings you don’t want to commit.
-for file in ~/.{path,bash_prompt,exports,aliases,functions,extra}; do
+for file in ~/.{functions,path,bash_prompt,exports,aliases,extra}; do
         [ -r "$file" ] && [ -f "$file" ] && source "$file"
 done
 unset file
@@ -17,18 +17,6 @@ shopt -s histappend
 
 # Autocorrect typos in path names when using `cd`
 shopt -s cdspell
-
-#THIS MUST BE AT THE END OF THE FILE FOR GVM TO WORK!!!
-[[ -s "$HOME/.gvm/bin/gvm-init.sh" ]] && source "$HOME/.gvm/bin/gvm-init.sh"
-
-#rbenv
-if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
-
-#pyenv
-if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
-
-#awscli
-_type aws_completer &&  complete -C aws_completer aws
 
 # osx?
 _isdarwin && source ~/.osx

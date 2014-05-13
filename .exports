@@ -29,6 +29,12 @@ if [[ -d "/usr/local/opt/android-sdk" ]]; then
     export ANDROID_HOME=/usr/local/opt/android-sdk
 fi
 
-#--- homebrew-cask 導入は様子見...
-# Link Homebrew casks in `/Applications` rather than `~/Applications`
-##export HOMEBREW_CASK_OPTS="--appdir=/Applications"
+if which pyenv > /dev/null; then
+    export PYENV_ROOT="$HOME/.pyenv"
+    # tmuxだとshimsが優先されないので直接指定...
+    export PATH="$PYENV_ROOT/bin:$PYENV_ROOT/shims:$PATH"
+fi
+
+if which rbenv > /dev/null; then
+    export RBENV_ROOT="$HOME/.rbenv"
+fi
