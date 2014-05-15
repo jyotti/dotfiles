@@ -28,6 +28,13 @@ install bash-completion
 install pyenv
 install rbenv
 
+install google-chrome
+install google-japanese-ime
+install github
+install item2
+install xtrafinder
+install bettertouchtool
+
 # SDKs
 ###install awscli   #--- use pip
 # android
