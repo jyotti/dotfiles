@@ -53,7 +53,7 @@ install brew-cask
 cask install google-chrome
 cask install google-japanese-ime
 cask install github
-cask install item2
+cask install iterm2
 cask install xtrafinder
 cask install bettertouchtool
 cask install macvim-kaoriya
