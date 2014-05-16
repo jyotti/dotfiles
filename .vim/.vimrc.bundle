@@ -45,6 +45,9 @@ NeoBundle 'taichouchou2/html5.vim'
 " コマンドを連続実行 http://mba-hack.blogspot.jp/2013/02/vim-submode.html
 NeoBundle 'kana/vim-submode'
 
+" powerline
+NeoBundle 'alpaca-tc/alpaca_powertabline'
+NeoBundle 'Lokaltog/powerline', { 'rtp' : 'powerline/bindings/vim'}
 " ----------- plugins ---------------
 
 call neobundle#end()

@@ -1,3 +1,6 @@
+# /usr/local/bin を最優先に
+export PATH=/usr/local/bin:$PATH
+
 #THIS MUST BE AT THE END OF THE FILE FOR GVM TO WORK!!!
 [[ -s "$HOME/.gvm/bin/gvm-init.sh" ]] && source "$HOME/.gvm/bin/gvm-init.sh"
 

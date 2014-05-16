@@ -17,6 +17,7 @@ tap sanemat/font
 # ---------------------------- #
 # Packages
 # ---------------------------- #
+install bash
 install ack
 install git
 install tig
@@ -25,8 +26,8 @@ install wget
 install bash-completion
 
 # develop
-install ruby-build
 install maven
+install ruby-build
 install pyenv
 install rbenv
 
@@ -44,7 +45,7 @@ install play12
 # ---------------------------- #
 # Extra Packages
 # ---------------------------- #
-install ricty
+install --powerline --vim-powerline ricty
 
 # ---------------------------- #
 # Cask
