@@ -53,14 +53,17 @@ install --powerline --vim-powerline ricty
 install brew-cask
 
 cask install java7
+cask install java6
 cask install google-chrome
 cask install google-japanese-ime
+cask install dropbox
 cask install github
 cask install iterm2
 cask install xtrafinder
 cask install bettertouchtool
 cask install macvim-kaoriya
 cask install mysqlworkbench
+cask install skype
 # virtualbox
 cask install virtualbox
 cask install vagrant

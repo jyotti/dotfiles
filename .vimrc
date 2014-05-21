@@ -9,10 +9,3 @@ source ~/.vim/.vimrc.mapping
 source ~/.vim/.vimrc.search
 source ~/.vim/.vimrc.extra
 source ~/.vim/.vimrc.neocomplcache
-
-" load configs...
-"source ~/.vim/userautoload/basic.vim
-"source ~/.vim/userautoload/editor.vim
-"source ~/.vim/userautoload/search.vim
-"source ~/.vim/userautoload/mapping.vim
-"source ~/.vim/userautoload/extra.vim
