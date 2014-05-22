@@ -30,6 +30,7 @@ install maven
 install ruby-build
 install pyenv
 install rbenv
+install mysql
 
 # SDKs
 ###install awscli   #--- use pip
