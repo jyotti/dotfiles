@@ -34,8 +34,8 @@ NeoBundle 'scrooloose/nerdtree'
 " solarized!  http://ethanschoonover.com/solarized
 NeoBundle 'altercation/vim-colors-solarized'
 
-" colorful status line
-NeoBundle 'Lokaltog/vim-powerline'
+" powerline
+""NeoBundle 'Lokaltog/vim-powerline'
 
 " --- syntax
 NeoBundle "pangloss/vim-javascript"
@@ -46,7 +46,7 @@ NeoBundle 'taichouchou2/html5.vim'
 NeoBundle 'kana/vim-submode'
 
 " powerline
-NeoBundle 'alpaca-tc/alpaca_powertabline'
+""NeoBundle 'alpaca-tc/alpaca_powertabline'
 NeoBundle 'Lokaltog/powerline', { 'rtp' : 'powerline/bindings/vim'}
 " ----------- plugins ---------------
 
