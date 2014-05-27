@@ -6,3 +6,6 @@ Thumbs.db
 
 # python binary files
 *.pyc
+
+# Vim
+.*.un~
