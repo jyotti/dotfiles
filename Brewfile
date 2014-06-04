@@ -24,6 +24,7 @@ install tig
 install tmux
 install wget
 install bash-completion
+install pstree
 
 # develop
 install maven
@@ -37,6 +38,7 @@ install mysql
 # android
 install android-sdk
 install apktool
+install pidcat
 
 # tmuxでクリップボードにコピー
 install reattach-to-user-namespace

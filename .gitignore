@@ -9,3 +9,8 @@ Thumbs.db
 
 # Vim
 .*.un~
+
+# IntelliJ
+*.iml
+*.ipr
+*.iws

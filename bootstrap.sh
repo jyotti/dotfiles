@@ -17,4 +17,5 @@ else
 fi
 
 [ ! -d ~/.vim/bundle ] && mkdir -p ~/.vim/bundle && git clone git://github.com/Shougo/neobundle.vim ~/.vim/bundle/neobundle.vim && vim -c ':NeoBundleInstall'
+[ ! -d ~/.vim/undo ] && mkdir -p ~/.vim/undo
 unset doIt

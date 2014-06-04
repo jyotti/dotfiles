@@ -73,3 +73,6 @@ set ttymouse=xterm2
 
 " ペースト時にautoindentを無効に
 ""set paste
+
+" undo file
+:set undodir=$HOME/.vim/undo
