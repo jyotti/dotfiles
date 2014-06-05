@@ -1,11 +1,11 @@
 dotfiles
 ========
 
-dotfileの設定
+実行
 
     sh bootstrap.sh
 
-確認しないで更新
+確認しない
 
     sh bootstrap.sh -f
 ## powerline
