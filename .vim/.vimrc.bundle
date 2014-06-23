@@ -16,6 +16,9 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 " vimでの入力補完 必須!
 NeoBundle 'Shougo/neocomplcache'
 
+" Unit
+NeoBundle 'Shougo/unite.vim'
+
 " vimでGitを操作する
 NeoBundle 'tpope/vim-fugitive'
 
