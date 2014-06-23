@@ -10,6 +10,7 @@
 [core]
     editor = vim
     excludesfile = ~/.gitignore
+    precomposeunicode = true
 [merge]
     tool = vimdiff
     ff = true
