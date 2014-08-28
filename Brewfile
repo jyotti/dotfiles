@@ -20,6 +20,7 @@ tap sanemat/font
 install bash
 install ack
 install git
+install git-now
 install tig
 install tmux
 install wget
