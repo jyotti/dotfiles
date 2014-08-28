@@ -31,7 +31,7 @@ install maven
 install ruby-build
 install pyenv
 install rbenv
-install npm
+install nodebrew
 install mysql
 
 # SDKs
