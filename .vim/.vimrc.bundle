@@ -43,7 +43,7 @@ NeoBundle 'altercation/vim-colors-solarized'
 " --- syntax
 NeoBundle "pangloss/vim-javascript"
 NeoBundle 'hail2u/vim-css3-syntax'
-NeoBundle 'taichouchou2/html5.vim'
+"NeoBundle 'taichouchou2/html5.vim'
 
 " コマンドを連続実行 http://mba-hack.blogspot.jp/2013/02/vim-submode.html
 NeoBundle 'kana/vim-submode'
