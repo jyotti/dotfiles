@@ -8,9 +8,6 @@ upgrade
 # Add repository
 # ---------------------------- #
 tap homebrew/versions
-# cask
-tap caskroom/cask
-tap caskroom/versions
 # Ricty
 tap sanemat/font
 
@@ -26,6 +23,7 @@ install tmux
 install wget
 install bash-completion
 install pstree
+install jq
 
 # develop
 install maven
@@ -36,7 +34,6 @@ install nodebrew
 install mysql
 
 # SDKs
-###install awscli   #--- use pip
 # android
 install android-sdk
 install apktool
@@ -51,30 +48,3 @@ install play12
 # Extra Packages
 # ---------------------------- #
 install --powerline --vim-powerline ricty
-
-# ---------------------------- #
-# Cask
-# ---------------------------- #
-install brew-cask
-
-cask install java7
-cask install java6
-cask install google-chrome
-cask install google-japanese-ime
-cask install dropbox
-cask install github
-cask install iterm2
-cask install xtrafinder
-cask install bettertouchtool
-cask install macvim-kaoriya
-cask install mysqlworkbench
-cask install skype
-# virtualbox
-cask install virtualbox
-cask install vagrant
-# android
-cask install genymotion
-cask install android-studio
-# editor
-cask install atom
-cask install mou
