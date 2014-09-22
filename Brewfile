@@ -33,6 +33,8 @@ install rbenv
 install nodebrew
 install mysql
 
+install graphviz
+
 # SDKs
 # android
 install android-sdk
