@@ -14,7 +14,3 @@ Thumbs.db
 *.iml
 *.ipr
 *.iws
-
-Gemfile.lock
-
-*.bak

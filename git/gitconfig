@@ -2,15 +2,12 @@
     name = Atsushi Nakajyo
     email = jyotti@gmail.com
 [color]
-    status = auto
-    diff = auto
-    branch = auto
-    interactive = auto
-    grep = auto
+    ui = true
 [core]
     editor = vim
     excludesfile = ~/.gitignore
     precomposeunicode = true
+    autocrlf = input
 [merge]
     tool = vimdiff
     ff = true
@@ -21,3 +18,4 @@
 [alias]
     s   = status
     ss  = status --short --branch        # statusをコンパクトに
+    l = log --pretty=oneline -n 20 --graph --abbrev-commit
