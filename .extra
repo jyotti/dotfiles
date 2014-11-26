@@ -3,6 +3,6 @@ _type aws_completer &&  complete -C aws_completer aws
 
 # spring
 # TODO なぜか始めの同期化の時だけシンタックスエラーが(´ε｀；)ｳｰﾝ…
-bash_spring="$HOME/.gvm/springboot/current/shell-completion/bash/spring"
-[ -s $bash_spring ] && source $bash_spring
-unset bash_spring
+###bash_spring="$HOME/.gvm/springboot/current/shell-completion/bash/spring"
+###[ -s $bash_spring ] && source $bash_spring
+###unset bash_spring

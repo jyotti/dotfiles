@@ -38,3 +38,8 @@ fi
 if which rbenv > /dev/null; then
     export RBENV_ROOT="$HOME/.rbenv"
 fi
+
+# nodebrew
+if which nodebrew > /dev/null; then
+    export PATH=$HOME/.nodebrew/current/bin:$PATH
+fi
