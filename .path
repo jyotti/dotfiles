@@ -2,17 +2,22 @@
 export PATH=/usr/local/bin:$PATH
 
 # GVM
-if [[ -s "$HOME/.gvm/bin/gvm-init.sh" ]]; then
+if [ -f "$HOME/.gvm/bin/gvm-init.sh" ] ; then
     . "$HOME/.gvm/bin/gvm-init.sh"
 fi
 
 # rbenv
-if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
+if _type rbenv; then
+    eval "$(rbenv init -)"
+fi
 
 # pyenv
-if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
+if _type pyenv; then
+    eval "$(pyenv init -)"
+fi
 
-# nodebrew
-if which nodebrew > /dev/null; then
-    export PATH=$HOME/.nodebrew/current/bin:$PATH
+# jenv
+if _type jenv ; then
+    eval "$(jenv init -)"
+    export JENV_ROOT="/usr/local/opt/jenv"
 fi
