@@ -21,3 +21,11 @@ if _type jenv ; then
     eval "$(jenv init -)"
     export JENV_ROOT="/usr/local/opt/jenv"
 fi
+
+# docker
+if _type boot2docker ; then
+    export DOCKER_CERT_PATH="$HOME/.boot2docker/certs/boot2docker-vm"
+    export DOCKER_TLS_VERIFY=1
+    export DOCKER_HOST=tcp://$(_dockerip):2376
+fi
+

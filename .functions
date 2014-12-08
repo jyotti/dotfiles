@@ -13,3 +13,9 @@ function _type() {
         return 1
     fi
 }
+
+function _dockerip() {
+    if _type boot2docker; then
+        boot2docker ip 2> /dev/null
+    fi
+}
