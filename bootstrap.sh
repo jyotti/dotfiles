@@ -3,7 +3,10 @@ cd "$(dirname "${BASH_SOURCE}")"
 git pull origin master
 function doIt() {
         rsync --exclude ".git/" --exclude ".DS_Store" --exclude "bootstrap.sh" \
-                --exclude "README.md" --exclude "LICENSE.txt" --exclude "*.swp" --exclude "Brewfile" --exclude "Caskfile" --exclude "Gemfile.*" --exclude "*.bak" --exclude "git/" -av --no-perms . ~
+              --exclude "README.md" --exclude "LICENSE.txt" --exclude "*.swp" \
+              --exclude "Brewfile" --exclude "Caskfile" --exclude "*.bak" \
+              --exclude "git/" --exclude "subtrees/" \
+              -av --no-perms . ~
         cp git/gitignore ~/.gitignore
         cp git/gitconfig ~/.gitconfig
 

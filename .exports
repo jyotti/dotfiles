@@ -43,3 +43,6 @@ fi
 if which nodebrew > /dev/null; then
     export PATH=$HOME/.nodebrew/current/bin:$PATH
 fi
+
+# awscli
+_type aws_completer && complete -C aws_completer aws

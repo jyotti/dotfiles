@@ -1,4 +1,7 @@
 # Add `~/bin` to the `$PATH`
+if [[ ! -d "$HOME/bin" ]] ; then
+    mkdir "$HOME/bin"
+fi
 export PATH="$HOME/bin:$PATH"
 
 # Load the shell dotfiles, and then some:

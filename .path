@@ -28,4 +28,3 @@ if _type boot2docker ; then
     export DOCKER_TLS_VERIFY=1
     export DOCKER_HOST=tcp://$(_dockerip):2376
 fi
-
