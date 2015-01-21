@@ -10,7 +10,6 @@ upgrade
 tap homebrew/versions
 # Ricty
 tap sanemat/font
-
 # ---------------------------- #
 # Packages
 # ---------------------------- #
@@ -50,3 +49,7 @@ install play12
 # Extra Packages
 # ---------------------------- #
 install --powerline --vim-powerline ricty
+
+# vagrant-bash-completion - https://github.com/kura/vagrant-bash-completion
+brew tap homebrew/completions
+brew install vagrant-completion
