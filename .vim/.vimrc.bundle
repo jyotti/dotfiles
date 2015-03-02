@@ -20,7 +20,7 @@ NeoBundle 'Shougo/neocomplcache'
 NeoBundle 'Shougo/unite.vim'
 
 " vimでGitを操作する
-NeoBundle 'tpope/vim-fugitive'
+"" NeoBundle 'tpope/vim-fugitive'
 
 " NeoBundle 'Lokaltog/vim-easymotion'
 
@@ -37,9 +37,6 @@ NeoBundle 'scrooloose/nerdtree'
 " solarized!  http://ethanschoonover.com/solarized
 NeoBundle 'altercation/vim-colors-solarized'
 
-" powerline
-""NeoBundle 'Lokaltog/vim-powerline'
-
 " --- syntax
 NeoBundle "pangloss/vim-javascript"
 NeoBundle 'hail2u/vim-css3-syntax'
@@ -50,7 +47,8 @@ NeoBundle 'kana/vim-submode'
 
 " powerline
 ""NeoBundle 'alpaca-tc/alpaca_powertabline'
-NeoBundle 'Lokaltog/powerline', { 'rtp' : 'powerline/bindings/vim'}
+""NeoBundle 'Lokaltog/powerline', { 'rtp' : 'powerline/bindings/vim'}
+NeoBundle 'powerline/powerline', {'rtp': 'powerline/bindings/vim/'}
 " ----------- plugins ---------------
 
 call neobundle#end()
