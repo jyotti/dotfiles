@@ -9,3 +9,4 @@ source ~/.vim/.vimrc.mapping
 source ~/.vim/.vimrc.search
 source ~/.vim/.vimrc.extra
 source ~/.vim/.vimrc.neocomplcache
+source ~/.vim/.vimrc.unite
