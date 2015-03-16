@@ -35,9 +35,9 @@ if which pyenv > /dev/null; then
     export PATH="$PYENV_ROOT/bin:$PYENV_ROOT/shims:$PATH"
 fi
 
-if which rbenv > /dev/null; then
-    export RBENV_ROOT="$HOME/.rbenv"
-fi
+##if which rbenv > /dev/null; then
+##    export RBENV_ROOT="$HOME/.rbenv"
+##fi
 
 # nodebrew
 if which nodebrew > /dev/null; then

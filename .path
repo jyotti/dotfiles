@@ -9,6 +9,8 @@ fi
 # rbenv
 if _type rbenv; then
     eval "$(rbenv init -)"
+    # use chefdk ?
+    [[ -d "/opt/chefdk/bin" ]] && export PATH="/opt/chefdk/bin:$PATH"
 fi
 
 # pyenv
