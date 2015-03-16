@@ -5,10 +5,10 @@ function doIt() {
         rsync --exclude ".git/" --exclude ".DS_Store" --exclude "bootstrap.sh" \
               --exclude "README.md" --exclude "LICENSE.txt" --exclude "*.swp" \
               --exclude "Brewfile" --exclude "Caskfile" --exclude "*.bak" --exclude ".extra" \
-              --exclude "git/" --exclude "subtrees/" \
+              --exclude "git/" --exclude "subtrees/" --exclude "brew.sh" \
               -av --no-perms . ~
-        cp git/gitignore ~/.gitignore
-        cp git/gitconfig ~/.gitconfig
+        rsync -av --no-perms git/gitignore ~/.gitignore
+        rsync -av --no-perms git/gitconfig ~/.gitconfig
 
         source ~/.bash_profile
 }
