@@ -1,0 +1,13 @@
+# 大文字小文字は無視
+set completion-ignore-case on
+
+# 補完候補が複数あったらベル鳴らさないですぐに表示させてくれる
+set show-all-if-ambiguous on
+
+# 補完候補にファイルタイプをつける
+set visible-stats on
+
+# 日本語
+set input-meta on
+set output-meta on
+set convert-meta off
