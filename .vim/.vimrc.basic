@@ -12,6 +12,8 @@ set backspace=indent,eol,start        " バックスペースでインデント�
 set formatoptions=lmoq                " 自動整形の実行方法  :help fo-table
 set vb t_vb=                          " ビープ音 ビジュアルベルを使用しない
 set browsedir=buffer                  " ファイルブラウザの初期ディレクトリ
+set display=lastline                  " 長いテキスト行でも描画
+set pumheight=10                      " 補完メニューの高さ
 
 " 特定のキーに行頭および行末の回りこみ移動を許可する設定
 "  b - [Backspace]  ノーマルモード ビジュアルモード

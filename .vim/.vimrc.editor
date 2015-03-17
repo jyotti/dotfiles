@@ -7,6 +7,8 @@ set number
 
 " 閉じ括弧が入力されたとき、対応する開き括弧にわずかの間ジャンプする
 set showmatch
+" showmatchに反応してジャンプするまでの時間 0.1 * n
+set matchtime=1
 
 " 保存時に行末の空白を除去する
 autocmd BufWritePre * :%s/\s\+$//e

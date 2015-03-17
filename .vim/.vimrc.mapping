@@ -27,6 +27,9 @@
 ""nnoremap <silent> <leader>to :<c-u>tabonly<cr>
 ""nnoremap <silent> <leader>ts :<c-u>tabs<cr>
 
+" ヤンクもDやCらと同じ動きにする
+nnoremap Y y$
+
 " `s`でペインとかタブとか
 " http://qiita.com/tekkoc/items/98adcadfa4bdc8b5a6ca#comment-01a49f3cbecbe28393e0
 nnoremap s <Nop>
