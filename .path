@@ -21,7 +21,6 @@ fi
 # jenv
 if _type jenv ; then
     eval "$(jenv init -)"
-    export JENV_ROOT="/usr/local/opt/jenv"
 fi
 
 # docker
