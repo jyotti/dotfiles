@@ -20,6 +20,7 @@ fi
 
 # jenv
 if _type jenv ; then
+    export JENV_ROOT=/usr/local/opt/jenv
     eval "$(jenv init -)"
 fi
 
