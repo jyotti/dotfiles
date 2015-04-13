@@ -18,6 +18,11 @@ if _type pyenv; then
     eval "$(pyenv init -)"
 fi
 
+# plenv
+if _type plenv; then
+    eval "$(plenv init -)"
+fi
+
 # jenv
 if _type jenv ; then
     export JENV_ROOT=/usr/local/opt/jenv
