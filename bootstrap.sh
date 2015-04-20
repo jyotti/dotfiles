@@ -3,7 +3,7 @@ cd "$(dirname "${BASH_SOURCE}")"
 git pull origin master
 function doIt() {
   rsync --include ".bashrc" --include ".bash_profile" --include ".functions" --include ".path" \
-    --include ".bash_prompt" --include ".exports" --include ".aliases" --include ".extra" \
+    --include ".bash_prompt" --include ".exports" --include ".aliases" \
     --include ".inputrc" --include ".osx" --include ".tmux.conf" \
     --include ".vimrc" --include ".vim" \
     --exclude "*" --exclude "*/" \
