@@ -5,8 +5,8 @@ function doIt() {
   rsync --include ".bashrc" --include ".bash_profile" --include ".functions" --include ".path" \
     --include ".bash_prompt" --include ".exports" --include ".aliases" \
     --include ".inputrc" --include ".osx" --include ".tmux.conf" \
-    --include ".vimrc" --include ".vim" \
-    --exclude "*" --exclude "*/" \
+    --include ".vimrc" --include ".vim/***" \
+    --exclude "*" \
     -av --no-perms . ~
 
   source ~/.bashrc
