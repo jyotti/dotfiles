@@ -94,3 +94,9 @@ autocmd InsertLeave * set nopaste
 "imap { {}<LEFT>
 "imap [ []<LEFT>
 "imap ( ()<LEFT>
+
+" highlight
+augroup PrevimSettings
+  autocmd!
+  autocmd BufNewFile,BufRead *.{md,mdwn,mkd,mkdn,mark*} set filetype=markdown
+augroup END
