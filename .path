@@ -1,37 +1,9 @@
 # /usr/local/bin を最優先に
 export PATH=/usr/local/bin:$PATH
 
-# GVM
-if [ -f "$HOME/.gvm/bin/gvm-init.sh" ] ; then
-    . "$HOME/.gvm/bin/gvm-init.sh"
-fi
-
-# rbenv
-if _type rbenv; then
-    eval "$(rbenv init -)"
-    # use chefdk ?
-    [[ -d "/opt/chefdk/bin" ]] && export PATH="/opt/chefdk/bin:$PATH"
-fi
-
-# pyenv
-if _type pyenv; then
-    eval "$(pyenv init -)"
-fi
-
-# plenv
-if _type plenv; then
-    eval "$(plenv init -)"
-fi
-
-# jenv
-if _type jenv ; then
-    export JENV_ROOT=/usr/local/opt/jenv
-    eval "$(jenv init -)"
-fi
-
 # docker
 if _type boot2docker ; then
-    export DOCKER_CERT_PATH="$HOME/.boot2docker/certs/boot2docker-vm"
-    export DOCKER_TLS_VERIFY=1
-    export DOCKER_HOST=tcp://$(_dockerip):2376
+  export DOCKER_CERT_PATH="$HOME/.boot2docker/certs/boot2docker-vm"
+  export DOCKER_TLS_VERIFY=1
+  export DOCKER_HOST=tcp://$(_dockerip):2376
 fi
