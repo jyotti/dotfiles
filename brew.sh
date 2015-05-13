@@ -15,6 +15,7 @@ brew install wget --with-iri
 
 # あると便利なやつ
 brew install ack
+brew install the_silver_searcher
 brew install jq
 brew install pstree
 brwe install git
@@ -29,6 +30,7 @@ brew install reattach-to-user-namespace
 
 # Development
 brew install pyenv
+brew install pyenv-virtualenv
 brew install ruby-build
 brew install rbenv
 brew install nodebrew
