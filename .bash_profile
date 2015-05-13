@@ -56,6 +56,7 @@ fi
 
 # nodebrew
 if which nodebrew > /dev/null; then
+  export PATH=$HOME/.nodebrew/current/bin:$PATH
   export NODEBREW_ROOT=/usr/local/var/nodebrew
   export PATH=$HOME/.nodebrew/current/bin:$PATH
 fi
