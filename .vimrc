@@ -7,6 +7,6 @@ source ~/.vim/.vimrc.color
 source ~/.vim/.vimrc.editor
 source ~/.vim/.vimrc.mapping
 source ~/.vim/.vimrc.search
-source ~/.vim/.vimrc.extra
 source ~/.vim/.vimrc.neocomplcache
 source ~/.vim/.vimrc.unite
+source ~/.vim/.vimrc.extra

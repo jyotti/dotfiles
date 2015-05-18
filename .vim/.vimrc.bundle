@@ -55,7 +55,9 @@ NeoBundle 'plasticboy/vim-markdown'
 NeoBundle 'kannokanno/previm'
 NeoBundle 'tyru/open-browser.vim'
 
-
+" emoji
+NeoBundle 'junegunn/vim-emoji'
+NeoBundle 'airblade/vim-gitgutter'
 " ----------- plugins ---------------
 
 call neobundle#end()
