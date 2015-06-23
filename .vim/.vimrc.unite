@@ -6,4 +6,6 @@ nmap <Space>f [unite]
 
 nnoremap <silent> ,uf :<C-u>UniteWithBufferDir -buffer-name=files file file/new<CR>
 nnoremap <silent> ,ub :<C-u>Unite buffer<CR>
+nnoremap <silent> ,uu :<C-u>Unite file_mru buffer<CR>
+nnoremap <silent> ,uy :<C-u>Unite history/yank<CR>
 "}}}
