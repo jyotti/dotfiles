@@ -2,10 +2,10 @@
 
 " unite prefix key
 nnoremap [unite] <Nop>
-nmap <Space>f [unite]
+nmap <Space>u [unite]
 
-nnoremap <silent> ,uf :<C-u>UniteWithBufferDir -buffer-name=files file file/new<CR>
-nnoremap <silent> ,ub :<C-u>Unite buffer<CR>
-nnoremap <silent> ,uu :<C-u>Unite file_mru buffer<CR>
-nnoremap <silent> ,uy :<C-u>Unite history/yank<CR>
+nnoremap <silent> [unite]f :<C-u>UniteWithBufferDir -buffer-name=files file file/new<CR>
+nnoremap <silent> [unite]b :<C-u>Unite buffer<CR>
+nnoremap <silent> [unite]u :<C-u>Unite file_mru buffer<CR>
+nnoremap <silent> [unite]y :<C-u>Unite history/yank<CR>
 "}}}
