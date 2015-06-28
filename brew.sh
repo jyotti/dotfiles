@@ -18,7 +18,7 @@ brew install ack
 brew install the_silver_searcher
 brew install jq
 brew install pstree
-brwe install git
+brew install git
 brew install git-now
 brew install tig
 brew install pstree
