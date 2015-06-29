@@ -13,8 +13,22 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 
 " ----------- plugins ---------------
 
-" vimでの入力補完 必須!
-NeoBundle 'Shougo/neocomplcache'
+" vimの非同期処理を提供してくれる
+NeoBundle 'Shougo/vimproc.vim', {
+\ 'build' : {
+\     'windows' : 'tools\\update-dll-mingw',
+\     'cygwin' : 'make -f make_cygwin.mak',
+\     'mac' : 'make -f make_mac.mak',
+\     'linux' : 'make',
+\     'unix' : 'gmake',
+\    },
+\ }
+
+" 入力補完
+""NeoBundle 'Shougo/neocomplcache'  " non-lua vim
+NeoBundle 'Shougo/neocomplete'    " with-lua vim
+NeoBundle 'Shougo/neosnippet'
+NeoBundle 'Shougo/neosnippet-snippets'
 
 " Unite
 NeoBundle 'Shougo/unite.vim'
@@ -49,14 +63,13 @@ NeoBundle 'hail2u/vim-css3-syntax'
 NeoBundle 'kana/vim-submode'
 
 " powerline
-""NeoBundle 'alpaca-tc/alpaca_powertabline'
-""NeoBundle 'Lokaltog/powerline', { 'rtp' : 'powerline/bindings/vim'}
 NeoBundle 'powerline/powerline', {'rtp': 'powerline/bindings/vim/'}
 
 " Markdown - http://www.key-p.com/blog/staff/archives/9032
-NeoBundle 'plasticboy/vim-markdown'
-NeoBundle 'kannokanno/previm'
-NeoBundle 'tyru/open-browser.vim'
+" ~~~ markdown関連は把握できてないので外す
+"""NeoBundle 'plasticboy/vim-markdown'
+"""NeoBundle 'kannokanno/previm'
+"""NeoBundle 'tyru/open-browser.vim'
 
 " emoji
 NeoBundle 'junegunn/vim-emoji'
