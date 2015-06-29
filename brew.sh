@@ -21,7 +21,6 @@ brew install pstree
 brew install git
 brew install git-now
 brew install tig
-brew install pstree
 
 # tmux
 brew install tmux
