@@ -22,7 +22,8 @@ export MANPAGER="less -X"
 export GREP_OPTIONS="--color=auto"
 
 # encoding java
-export _JAVA_OPTIONS="-Dfile.encoding=UTF-8"
+# --- `java -version`で"Picked up _JAVA_OPTIONS"と出力され、jenvのaliasがPickedに！
+##export _JAVA_OPTIONS="-Dfile.encoding=UTF-8"
 
 # Android-SDK
 if [[ -d "/usr/local/opt/android-sdk" ]]; then
