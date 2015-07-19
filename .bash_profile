@@ -51,6 +51,7 @@ fi
 
 # plenv
 if _type plenv; then
+  export PLENV_ROOT=/usr/local/opt/plenv
   eval "$(plenv init -)"
 fi
 
