@@ -24,43 +24,51 @@ NeoBundle 'Shougo/vimproc.vim', {
 \    },
 \ }
 
-" 入力補完
-""NeoBundle 'Shougo/neocomplcache'  " non-lua vim
-NeoBundle 'Shougo/neocomplete'    " with-lua vim
-NeoBundle 'Shougo/neosnippet'
-NeoBundle 'Shougo/neosnippet-snippets'
+" Completion {{{
+  ""NeoBundle 'Shougo/neocomplcache'  " non-lua vim
+  NeoBundle 'Shougo/neocomplete'    " with-lua vim
+  NeoBundle 'Shougo/neosnippet'
+  NeoBundle 'Shougo/neosnippet-snippets'
+" }}}
 
-" Unite
-NeoBundle 'Shougo/unite.vim'
-" Unite - vimfiler
-NeoBundle 'Shougo/vimfiler.vim'
+" Unite {{{
+  " Unite
+  NeoBundle 'Shougo/unite.vim'
+" }}}
 
+" Utility {{{
+  NeoBundle 'Shougo/vimfiler.vim'
+  NeoBundle 'Shougo/vimshell.vim'
 
-" vimでGitを操作する
-"" NeoBundle 'tpope/vim-fugitive'
+  " vimでGitを操作する
+  "" NeoBundle 'tpope/vim-fugitive'
 
-" NeoBundle 'Lokaltog/vim-easymotion'
+  " NeoBundle 'Lokaltog/vim-easymotion'
+  "
+  " NERDTree
+  NeoBundle 'scrooloose/nerdtree'
+" }}}
 
-" zencoding <c-y>,
-NeoBundle 'mattn/emmet-vim'
+" Edit {{{
+  " zencoding <c-y>,
+  NeoBundle 'mattn/emmet-vim'
 
-" テキストを括弧で囲んだり削除したり
-NeoBundle 'tpope/vim-surround'
+  " テキストを括弧で囲んだり削除したり
+  NeoBundle 'tpope/vim-surround'
 
-" NERDTree
-NeoBundle 'scrooloose/nerdtree'
+  " コマンドを連続実行 http://mba-hack.blogspot.jp/2013/02/vim-submode.html
+  NeoBundle 'kana/vim-submode'
+" }}}
+
+" Syntax {{{
+  NeoBundle "pangloss/vim-javascript"
+  NeoBundle 'hail2u/vim-css3-syntax'
+  "NeoBundle 'taichouchou2/html5.vim'
+" }}}
 
 " --- color
 " solarized!  http://ethanschoonover.com/solarized
 NeoBundle 'altercation/vim-colors-solarized'
-
-" --- syntax
-NeoBundle "pangloss/vim-javascript"
-NeoBundle 'hail2u/vim-css3-syntax'
-"NeoBundle 'taichouchou2/html5.vim'
-
-" コマンドを連続実行 http://mba-hack.blogspot.jp/2013/02/vim-submode.html
-NeoBundle 'kana/vim-submode'
 
 " powerline
 NeoBundle 'powerline/powerline', {'rtp': 'powerline/bindings/vim/'}
@@ -73,7 +81,7 @@ NeoBundle 'powerline/powerline', {'rtp': 'powerline/bindings/vim/'}
 
 " emoji
 NeoBundle 'junegunn/vim-emoji'
-NeoBundle 'airblade/vim-gitgutter'
+""NeoBundle 'airblade/vim-gitgutter'
 " ----------- plugins ---------------
 
 call neobundle#end()
