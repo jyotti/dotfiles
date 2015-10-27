@@ -1,6 +1,9 @@
 # install Homebrew Cask
 brew install caskroom/cask/brew-cask
 
+# alternate versions
+brew tap caskroom/versions
+
 # App
 brew cask install google-chrome
 brew cask install google-japanese-ime
