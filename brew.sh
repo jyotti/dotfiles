@@ -14,7 +14,7 @@ brew install bash-completion
 brew install wget --with-iri
 
 # あると便利なやつ
-brew install ack
+#brew install ack
 brew install the_silver_searcher
 brew install jq
 brew install pstree
@@ -43,8 +43,8 @@ brew install pidcat
 
 # Install Ricty font - https://github.com/sanemat/homebrew-font
 # powerline向けも一緒にインストール
-brew tap sanemat/font
-brew install ricty --powerline --vim-powerline
+##brew tap sanemat/font
+##brew install ricty --powerline --vim-powerline
 
 # この辺はなくても困らないやつ
 # - vagrantのコマンド補完
