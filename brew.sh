@@ -43,12 +43,12 @@ brew install pidcat
 
 # Install Ricty font - https://github.com/sanemat/homebrew-font
 # powerline向けも一緒にインストール
-##brew tap sanemat/font
-##brew install ricty --powerline --vim-powerline
+brew tap sanemat/font
+brew install ricty --powerline --vim-powerline
 
 # この辺はなくても困らないやつ
 # - vagrantのコマンド補完
-brew install vagrant-completion
+###brew install vagrant-completion
 
 # 古いフォーミュラなど掃除
 brew cleanup
