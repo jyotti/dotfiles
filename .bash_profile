@@ -24,11 +24,6 @@ shopt -s cdspell
 # osx?
 _isdarwin && source ~/.osx
 
-# GVM
-if [ -f "$HOME/.gvm/bin/gvm-init.sh" ] ; then
-  . "$HOME/.gvm/bin/gvm-init.sh"
-fi
-
 # pyenv
 if _type pyenv; then
   export PYENV_ROOT=/usr/local/var/pyenv
@@ -59,4 +54,10 @@ fi
 if which nodebrew > /dev/null; then
   export NODEBREW_ROOT=/usr/local/var/nodebrew
   export PATH=$NODEBREW_ROOT/current/bin:$PATH
+fi
+
+# sdkman
+if [[ -f "$HOME/.sdkman/bin/sdkman-init.sh" ]]; then
+  export SDKMAN_DIR="$HOME/.sdkman"
+  . "$HOME/.sdkman/bin/sdkman-init.sh"
 fi
