@@ -11,6 +11,7 @@ fi
 if [[ -d $(brew --prefix coreutils)/libexec/gnubin ]]; then
   export PATH="$(brew --prefix coreutils)/libexec/gnubin:$PATH"
 fi
+
 # HomeBrew
 if type brew > /dev/null 2>&1; then
     # brew completion
@@ -21,10 +22,5 @@ if type brew > /dev/null 2>&1; then
     # bash completion
     if [ -f $(brew --prefix)/etc/bash_completion ]; then
         . $(brew --prefix)/etc/bash_completion
-    fi
-
-    # vagrant completion
-    if [ -f $(brew --prefix)/etc/bash_completion.d/vagrant ]; then
-        . $(brew --prefix)/etc/bash_completion.d/vagrant
     fi
 fi
