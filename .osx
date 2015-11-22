@@ -1,26 +1,27 @@
 # Vim Kaoriya
 kaoriya="/Applications/MacVim.app/Contents/MacOS/Vim"
 if [ ! -s $kaoriya ]; then
-    kaoriya="$HOME$kaoriya"
+  kaoriya="$HOME$kaoriya"
 fi
 if [ -s $kaoriya ]; then
-    alias vi='env LANG=ja_JP.UTF-8 "$kaoriya" "$@"'
-    alias vim='env_LANG=ja_JP.UTF-8 "$kaoriya" "$@"'
+  alias vi='env LANG=ja_JP.UTF-8 "$kaoriya" "$@"'
+  alias vim='env_LANG=ja_JP.UTF-8 "$kaoriya" "$@"'
 fi
 
+# GNU coreutils
 if [[ -d $(brew --prefix coreutils)/libexec/gnubin ]]; then
   export PATH="$(brew --prefix coreutils)/libexec/gnubin:$PATH"
 fi
 
 # HomeBrew
 if type brew > /dev/null 2>&1; then
-    # brew completion
-    if [ -f $(brew --prefix)/Library/Contributions/brew_bash_completion.sh ]; then
-        . $(brew --prefix)/Library/Contributions/brew_bash_completion.sh
-    fi
+  # brew completion
+  if [ -f $(brew --prefix)/Library/Contributions/brew_bash_completion.sh ]; then
+    . $(brew --prefix)/Library/Contributions/brew_bash_completion.sh
+  fi
 
-    # bash completion
-    if [ -f $(brew --prefix)/etc/bash_completion ]; then
-        . $(brew --prefix)/etc/bash_completion
-    fi
+  # bash completion
+  if [ -f $(brew --prefix)/etc/bash_completion ]; then
+    . $(brew --prefix)/etc/bash_completion
+  fi
 fi
