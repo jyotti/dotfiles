@@ -10,17 +10,22 @@ brew upgrade
 brew install bash
 brew install bash-completion
 
+# GNU core utilities
+brew install coreutils
+
 # IRIサポートのwget
 brew install wget --with-iri
 
 # あると便利なやつ
 #brew install ack
+brew install tree
 brew install the_silver_searcher
 brew install jq
-brew install pstree
 brew install git
 brew install git-now
 brew install tig
+brew install curl
+brew install pstree
 
 # tmux
 brew install tmux
@@ -40,6 +45,10 @@ brew install plenv
 brew install android-sdk
 brew install apktool
 brew install pidcat
+
+# taps
+brew tap homebrew/completions
+brew tap homebrew/versions
 
 # Install Ricty font - https://github.com/sanemat/homebrew-font
 # powerline向けも一緒にインストール
