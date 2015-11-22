@@ -1,21 +1,24 @@
 [user]
-    name = Atsushi Nakajyo
-    email = jyotti@gmail.com
+  name = Atsushi Nakajyo
+  email = jyotti@gmail.com
 [color]
-    ui = true
+  ui = true
 [core]
-    editor = vim
-    excludesfile = ~/.gitignore
-    precomposeunicode = true
-    autocrlf = input
+  editor = vim
+  excludesfile = ~/.gitignore
+  precomposeunicode = true
+  autocrlf = input
 [merge]
-    tool = vimdiff
-    ff = true
+  tool = vimdiff
+  ff = true
 [push]
-    default = upstream
+  default = upstream
 [pull]
-    rebaes = true
+  rebaes = true
 [alias]
-    s   = status
-    ss  = status --short --branch        # statusをコンパクトに
-    l = log --pretty=oneline -n 20 --graph --abbrev-commit
+  s   = status
+  ss  = status --short --branch        # statusをコンパクトに
+[filter "lfs"]
+  clean = git-lfs clean %f
+  smudge = git-lfs smudge %f
+  required = true
