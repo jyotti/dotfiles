@@ -51,7 +51,7 @@ if _type plenv; then
 fi
 
 # nodebrew
-if which nodebrew > /dev/null; then
+if _type nodebrew; then
   export NODEBREW_ROOT=/usr/local/var/nodebrew
   export PATH=$NODEBREW_ROOT/current/bin:$PATH
 fi
@@ -60,4 +60,9 @@ fi
 if [[ -f "$HOME/.sdkman/bin/sdkman-init.sh" ]]; then
   export SDKMAN_DIR="$HOME/.sdkman"
   . "$HOME/.sdkman/bin/sdkman-init.sh"
+fi
+
+# Android-SDK
+if [[ -d "/usr/local/opt/android-sdk" ]]; then
+  export ANDROID_HOME=/usr/local/opt/android-sdk
 fi

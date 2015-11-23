@@ -25,10 +25,5 @@ export GREP_OPTIONS="--color=auto"
 # --- `java -version`で"Picked up _JAVA_OPTIONS"と出力され、jenvのaliasがPickedに！
 ##export _JAVA_OPTIONS="-Dfile.encoding=UTF-8"
 
-# Android-SDK
-if [[ -d "/usr/local/opt/android-sdk" ]]; then
-    export ANDROID_HOME=/usr/local/opt/android-sdk
-fi
-
 # awscli
 _type aws_completer && complete -C aws_completer aws
