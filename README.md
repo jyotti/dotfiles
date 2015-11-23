@@ -2,14 +2,11 @@
 
 ## Install
 
-    sh bootstrap.sh
+`source bootstrap.sh`
 
 または
 
-    sh bootstrap.sh -f
-
-## powerline
-[POWERLINE](POWERLINE.md)
+`source bootstrap.sh -f`
 
 ## Thanks
 https://github.com/mathiasbynens/dotfiles
