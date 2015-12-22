@@ -46,7 +46,7 @@ NeoBundle 'Shougo/vimproc.vim', {
   " NeoBundle 'Lokaltog/vim-easymotion'
   "
   " NERDTree
-  NeoBundle 'scrooloose/nerdtree'
+  """ NeoBundle 'scrooloose/nerdtree'
 " }}}
 
 " Edit {{{
