@@ -41,6 +41,7 @@ brew install rbenv
 brew install nodebrew
 brew install jenv
 brew install plenv
+brew install direnv
 
 # Development at Android
 brew install android-sdk

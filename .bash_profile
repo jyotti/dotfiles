@@ -62,6 +62,11 @@ if [[ -f "$HOME/.sdkman/bin/sdkman-init.sh" ]]; then
   . "$HOME/.sdkman/bin/sdkman-init.sh"
 fi
 
+# direnv
+if _type direnv; then
+  eval "$(direnv hook bash)"
+fi
+
 # Android-SDK
 if [[ -d "/usr/local/opt/android-sdk" ]]; then
   export ANDROID_HOME=/usr/local/opt/android-sdk
