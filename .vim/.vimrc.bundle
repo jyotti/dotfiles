@@ -63,6 +63,8 @@ NeoBundle 'Shougo/vimproc.vim', {
 " Syntax {{{
   NeoBundle "pangloss/vim-javascript"
   NeoBundle 'hail2u/vim-css3-syntax'
+  NeoBundle 'elzr/vim-json' " http://qiita.com/karur4n/items/a26007236c59c5fb8735
+  "let g:vim_json_syntax_conceal = 0
   "NeoBundle 'taichouchou2/html5.vim'
 " }}}
 
