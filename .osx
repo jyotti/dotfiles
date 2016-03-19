@@ -1,11 +1,8 @@
-# Vim Kaoriya
-kaoriya="/Applications/MacVim.app/Contents/MacOS/Vim"
-if [ ! -s $kaoriya ]; then
-  kaoriya="$HOME$kaoriya"
-fi
-if [ -s $kaoriya ]; then
-  alias vi='env LANG=ja_JP.UTF-8 "$kaoriya" "$@"'
-  alias vim='env_LANG=ja_JP.UTF-8 "$kaoriya" "$@"'
+# MacVim
+macvim="/Applications/MacVim.app/Contents/MacOS/Vim"
+if [[ -s $macvim ]]; then
+  alias vi='env LANG=ja_JP.UTF-8 "$macvim" "$@"'
+  alias vim='env_LANG=ja_JP.UTF-8 "$macvim" "$@"'
 fi
 
 # GNU coreutils

@@ -25,6 +25,9 @@ brew install git-now
 brew install tig
 brew install curl
 brew install pstree
+# macvim
+brew install macvim --with-lua
+brew linkapps macvim
 
 # tmux
 brew install tmux
