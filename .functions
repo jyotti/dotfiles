@@ -1,21 +1,21 @@
 function _isdarwin() {
-    if [[ ( $OSTYPE == darwin* ) ]]; then
-        return 0
-    else
-        return 1
-    fi
+  if [[ ( $OSTYPE == darwin* ) ]]; then
+    return 0
+  else
+    return 1
+  fi
 }
 
 function _type() {
-    if type $1 > /dev/null 2>&1; then
-        return 0
-    else
-        return 1
-    fi
+  if type $1 > /dev/null 2>&1; then
+    return 0
+  else
+    return 1
+  fi
 }
 
 function _dockerip() {
-    if _type boot2docker; then
-        boot2docker ip 2> /dev/null
-    fi
+  if _type boot2docker; then
+    boot2docker ip 2> /dev/null
+  fi
 }
