@@ -1,5 +1,5 @@
 # install Homebrew Cask
-brew install caskroom/cask/brew-cask
+brew tap caskroom/cask
 
 # alternate versions
 brew tap caskroom/versions
