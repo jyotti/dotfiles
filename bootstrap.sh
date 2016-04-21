@@ -21,6 +21,15 @@ else
   fi
 fi
 
-[ ! -d ~/.vim/bundle ] && mkdir -p ~/.vim/bundle && git clone git://github.com/Shougo/neobundle.vim ~/.vim/bundle/neobundle.vim && vim -c ':NeoBundleInstall'
-[ ! -d ~/.vim/undo ] && mkdir -p ~/.vim/undo
+if [[ ! -e ~/.vim/bundle ]]; then
+  echo 'vim/bundle directory not found. make directory and git clone ... '
+  mkdir -p ~/.vim/bundle
+  git clone git://github.com/Shougo/neobundle.vim ~/.vim/bundle/neobundle.vim
+  vim -c ':NeoBundleInstall'
+fi
+if [[ ! -e ~/.vim/undo ]]; then
+  mkdir -p ~/.vim/undo
+fi
+#[ ! -e ~/.vim/bundle ] && mkdir -p ~/.vim/bundle && git clone git://github.com/Shougo/neobundle.vim ~/.vim/bundle/neobundle.vim && vim -c ':NeoBundleInstall'
+#[ ! -e ~/.vim/undo ] && mkdir -p ~/.vim/undo
 unset doIt
