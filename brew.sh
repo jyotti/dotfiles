@@ -39,7 +39,7 @@ brew install pyenv
 brew install pyenv-virtualenv
 brew install ruby-build
 brew install rbenv
-brew install nodebrew
+#brew install nodebrew
 brew install jenv
 brew install perl
 brew install perl-build
