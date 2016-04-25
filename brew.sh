@@ -25,8 +25,9 @@ brew install git-now
 brew install tig
 brew install curl
 brew install pstree
-# macvim
-brew install macvim --with-lua
+# macvim - use powerline
+# - https://powerline.readthedocs.org/en/latest/installation/osx.html
+brew install macvim --env-std --with-override-system-vim --with-lua
 brew linkapps macvim
 
 # tmux
@@ -45,6 +46,7 @@ brew install perl
 brew install perl-build
 brew install plenv
 brew install direnv
+brew install awscli
 
 # Development at Android
 brew install android-sdk

@@ -1,7 +1,5 @@
 # aws
-awscli
 boto
 
 # powerline
-powerline-status
 psutil
