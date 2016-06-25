@@ -4,6 +4,18 @@ if [[ ! -d "$HOME/bin" ]] ; then
 fi
 export PATH="$HOME/bin:$PATH"
 
+# XDG Base Directory Specification
+export XDG_DATA_HOME=$HOME/.local/share
+export XDG_CONFIG_HOME=$HOME/.config
+#export XDG_DATA_DIRS=/usr/local/share/:/usr/share/
+#export XDG_CONFIG_DIRS=/etc/xdg
+export XDG_CACHE_HOME=$HOME/.cache
+#export XDG_RUNTIME_DIR=
+
+mkdir -p ${XDG_DATA_HOME}
+mkdir -p ${XDG_CONFIG_HOME}
+mkdir -p ${XDG_CACHE_HOME}
+
 # Load the shell dotfiles, and then some:
 # * ~/.path can be used to extend `$PATH`.
 # * ~/.extra can be used for other settings you don’t want to commit.
