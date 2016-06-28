@@ -29,6 +29,8 @@ brew install pstree
 # - https://powerline.readthedocs.org/en/latest/installation/osx.html
 brew install macvim --env-std --with-override-system-vim --with-lua
 brew linkapps macvim
+# neovim
+brew install neovim/neovim/neovim
 
 # tmux
 brew install tmux
