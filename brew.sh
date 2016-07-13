@@ -11,7 +11,7 @@ brew install bash
 brew install bash-completion
 
 # GNU core utilities
-brew install coreutils
+brew install coreutils --with-gmp
 
 # IRIサポートのwget
 brew install wget --with-iri
