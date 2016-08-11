@@ -25,6 +25,7 @@ brew install git-now
 brew install tig
 brew install curl
 brew install pstree
+brew install gettext
 # macvim - use powerline
 # - https://powerline.readthedocs.org/en/latest/installation/osx.html
 brew install macvim --env-std --with-override-system-vim --with-lua
