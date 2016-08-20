@@ -37,7 +37,12 @@ endif
 
 execute 'source' VimHome() . '/dein.vim'
 
-if !has('vim_starting')
-  syntax enable
-  filetype plugin indent on
-endif
+syntax enable
+filetype plugin indent on
+
+" ------------------------------------------------------------------------------
+" Platform
+
+"if has('nvim')
+"  execute 'source' VimHome() . '/neovim.vim'
+"endif

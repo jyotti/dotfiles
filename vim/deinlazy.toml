@@ -1,6 +1,9 @@
 [[plugins]]
-repo = 'Shougo/dein.vim'
+repo = 'Shougo/unite.vim'
 
 [[plugins]]
-repo = 'Shougo/vimproc.vim'
-build = 'make'
+repo = 'Shougo/vimfiler.vim'
+
+[[plugins]]
+repo = 'tpope/vim-surround'
+

@@ -9,31 +9,20 @@ build = 'make'
 repo = 'powerline/powerline'
 rtp = 'powerline/bindings/vim'
 hook_add = '''
-  set rtp+=~/.cache/dein/repos/github.com/powerline/bindings/vim
-'''
-hook_post_source = '''
   " doc - https://powerline.readthedocs.io/en/master/tips-and-tricks.html
+  call Msg('Configure powerline')
+  let s:powerline_vim = CacheHome() . '/dein/repos/github.com/powerline/bindings/vim'
+  set rtp+=s:powerline_vim
   set laststatus=2 " Always display the statusline in all windows
   set showtabline=2 " Always display the tabline, even if there is only one tab
   set noshowmode " Hide the default mode text (e.g. -- INSERT -- below the statusline)
 '''
 
 [[plugins]]
-repo = 'Shougo/unite.vim'
-
-[[plugins]]
-repo = 'Shougo/vimfiler.vim'
-
-[[plugins]]
-repo = 'tpope/vim-surround'
-
-[[plugins]]
-repo = 'kana/vim-submode'
-
-[[plugins]]
 repo = 'altercation/vim-colors-solarized'
-hook_post_source = '''
+hook_add = '''
   " doc - http://ethanschoonover.com/solarized/vim-colors-solarized
+  call Msg('Configure vim-colors-solarized')
   syntax enable
   if has('gui_running')
     set background=light
