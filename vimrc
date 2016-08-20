@@ -46,3 +46,5 @@ filetype plugin indent on
 "if has('nvim')
 "  execute 'source' VimHome() . '/neovim.vim'
 "endif
+
+execute 'source' VimHome() . '/mapping.vim'
