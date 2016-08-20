@@ -27,6 +27,10 @@ function! VimHome() abort
   return s:vim_home
 endfunction
 
+function! Msg(msg) abort
+  echo '### ' . a:msg
+endfunction
+
 if has('vim_starting')
   execute 'source' VimHome() . '/init.vim'
 endif
