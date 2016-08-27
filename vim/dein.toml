@@ -28,3 +28,34 @@ hook_add = '''
   colorscheme solarized
   let g:solarized_termcolors=256
 '''
+
+[[plugins]]
+repo = 'Shougo/unite.vim'
+hook_add = '''
+  " unite prefix key
+  nnoremap [unite] <Nop>
+  nmap <Leader>u [unite]
+
+  nnoremap <silent> [unite]f :<C-u>UniteWithBufferDir -buffer-name=files file file/new<CR>
+  nnoremap <silent> [unite]b :<C-u>Unite buffer<CR>
+  nnoremap <silent> [unite]u :<C-u>Unite file_mru buffer<CR>
+  nnoremap <silent> [unite]y :<C-u>Unite history/yank<CR>
+'''
+
+[[plugins]]
+repo = 'Shougo/vimfiler.vim'
+depends = 'unite.vim'
+on_if = "isdirectory(bufname('%'))"
+hook_add = '''
+  " vimfilerをデフォルトに
+  let g:vimfiler_as_default_explorer = 1
+  " safe-modeをoffで起動
+  let g:vimfiler_safe_mode_by_default = 0
+  let g:vimfiler_force_overwrite_statusline = 0
+
+  let g:vimfiler_tree_leaf_icon = ' '
+ 	let g:vimfiler_tree_opened_icon = '▾'
+ 	let g:vimfiler_tree_closed_icon = '▸'
+ 	"let g:vimfiler_file_icon = '-'
+ 	let g:vimfiler_marked_file_icon = '*'
+'''
