@@ -28,7 +28,7 @@ function! VimHome() abort
 endfunction
 
 function! Msg(msg) abort
-  echo '### ' . a:msg
+  "echo '### ' . a:msg
 endfunction
 
 if has('vim_starting')
@@ -47,4 +47,5 @@ filetype plugin indent on
 "  execute 'source' VimHome() . '/neovim.vim'
 "endif
 
+execute 'source' VimHome() . '/basic.vim'
 execute 'source' VimHome() . '/mapping.vim'
