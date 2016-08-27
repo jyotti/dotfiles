@@ -1,8 +1,25 @@
 [[plugins]]
 repo = 'Shougo/unite.vim'
+hook_add = '''
+  " unite prefix key
+  nnoremap [unite] <Nop>
+  nmap <Leader>u [unite]
+
+  nnoremap <silent> [unite]f :<C-u>UniteWithBufferDir -buffer-name=files file file/new<CR>
+  nnoremap <silent> [unite]b :<C-u>Unite buffer<CR>
+  nnoremap <silent> [unite]u :<C-u>Unite file_mru buffer<CR>
+  nnoremap <silent> [unite]y :<C-u>Unite history/yank<CR>
+'''
 
 [[plugins]]
 repo = 'Shougo/vimfiler.vim'
+depends = 'unite.vim'
+hook_source = '''
+  " vimfilerをデフォルトのエキスプローラーに
+  let g:vimfiler_as_default_explorer = 1
+  " safe-modeをoffで起動
+  let g:vimfiler_safe_mode_by_default = 0
+'''
 
 [[plugins]]
 repo = 'tpope/vim-surround'
