@@ -120,14 +120,17 @@ set ignorecase
 set smartcase
 
 " ------------------------------------------------------------------------------
-" Other
+" Cursor
 
 " カーソル行ハイライト
 set cursorline
+" numberのみハイライト
+"hi clear CursorLine
+highlight CursorLine ctermbg=black guibg=black
 
-" カレントウィンドウにのみ罫線を引く
+" カレントウィンドウのみカーソルハイライト
 augroup cch
-    autocmd! cch
-    autocmd WinLeave * set nocursorline
-    autocmd WinEnter,BufRead * set cursorline
+  autocmd! cch
+  autocmd WinLeave * set nocursorline
+  autocmd WinEnter,BufRead * set cursorline
 augroup END
