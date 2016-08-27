@@ -1,8 +1,11 @@
 " ------------------------------------------------------------------------------
 " Key mapping
 
-" ヤンクもDやCらと同じ動きにする
+" Yで行末までヤンク - http://itchyny.hatenablog.com/entry/2014/12/25/090000
 nnoremap Y y$
+
+" Escの2回押しで検索ハイライトを消去
+nmap <Esc><Esc> :nohlsearch<CR><Esc>
 
 " windowコマンドを<C-w>から`s`に置き換え
 " http://qiita.com/tekkoc/items/98adcadfa4bdc8b5a6ca
