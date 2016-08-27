@@ -40,6 +40,17 @@ if has('gui_running')
   set guioptions+=a
 endif
 
+"コマンドラインモードの補完
+set wildmenu
+" ""              最初のマッチのみを補完
+" full            次のマッチを完全に補完
+" longest         共通する最長の文字列まで補完
+" longest:full    longestと同じで、wildmenuが有効ならばそれを開始する
+" list            マッチするものをリストで表示
+" list:full       listと同じで、さらに<Tag>を押す毎に次のマッチを保管
+" list:longest    複数のマッチがあるときは、全てのマッチを羅列し、共通する最長の文字列までが補完される
+set wildmode=list:longest,full
+
 " ------------------------------------------------------------------------------
 " Edit
 
