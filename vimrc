@@ -41,11 +41,18 @@ syntax enable
 filetype plugin indent on
 
 " ------------------------------------------------------------------------------
+" Configure
+
+execute 'source' VimHome() . '/basic.vim'
+execute 'source' VimHome() . '/mapping.vim'
+
+" ------------------------------------------------------------------------------
 " Platform
 
 "if has('nvim')
 "  execute 'source' VimHome() . '/neovim.vim'
 "endif
 
-execute 'source' VimHome() . '/basic.vim'
-execute 'source' VimHome() . '/mapping.vim'
+if has('gui_running')
+  set guifont=Ricty\ Regular\ for\ Powerline:h14
+endif
