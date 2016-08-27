@@ -81,6 +81,8 @@ set clipboard+=unnamed
 set mouse=a
 set ttymouse=xterm2
 
+" ノーマルモード時に自動でペーストモードを解除する
+autocmd InsertLeave * set nopaste
 " ------------------------------------------------------------------------------
 " Indent
 
