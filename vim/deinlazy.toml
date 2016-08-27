@@ -22,6 +22,14 @@ hook_source = '''
 '''
 
 [[plugins]]
+repo = 'Shougo/neocomplete.vim'
+if = "has('lua')"
+on_event = 'InsertEnter'
+hook_source = '''
+  execute 'source' VimHome() . '/plugins/neocomplete.vim'
+'''
+
+[[plugins]]
 repo = 'tpope/vim-surround'
 
 [[plugins]]
