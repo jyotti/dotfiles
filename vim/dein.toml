@@ -30,7 +30,11 @@ hook_add = '''
 '''
 
 [[plugins]]
+repo = 'Shougo/neomru.vim'
+
+[[plugins]]
 repo = 'Shougo/unite.vim'
+depends = 'neomru.vim'
 hook_add = '''
   " unite prefix key
   nnoremap [unite] <Nop>
