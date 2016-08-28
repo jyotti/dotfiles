@@ -67,3 +67,12 @@ hook_add = '''
 [[plugins]]
 repo = 'cespare/vim-toml'
 on_ft = 'toml'
+
+# カーソル位置のftを判別
+[[plugins]]
+repo = 'Shougo/context_filetype.vim'
+
+# カーソル位置のftを切り替え
+[[plugins]]
+repo = 'osyo-manga/vim-precious'
+depends = 'context_filetype.vim'
