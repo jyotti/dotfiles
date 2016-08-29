@@ -26,7 +26,7 @@ hook_add = '''
     set background=dark
   endif
   colorscheme solarized
-  let g:solarized_termcolors=256
+  "let g:solarized_termcolors=256
 '''
 
 [[plugins]]
