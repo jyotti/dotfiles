@@ -44,6 +44,17 @@ hook_add = '''
   nnoremap <silent> [unite]b :<C-u>Unite buffer<CR>
   nnoremap <silent> [unite]u :<C-u>Unite file_mru buffer<CR>
   nnoremap <silent> [unite]y :<C-u>Unite history/yank<CR>
+  " grep
+  nnoremap <silent> [unite]g :<C-u>Unite grep:. -buffer-name=search-buffer<CR>
+  " grep word on the cursor
+  nnoremap <silent> [unite]cg :<C-u>Unite grep:. -buffer-name=search-buffer<CR><C-R><C-W>
+
+  if executable('ag')
+    " the silver searcher
+    let g:unite_source_grep_command = 'ag'
+    let g:unite_source_grep_default_opts = '--nogroup --nocolor --column'
+    let g:unite_source_grep_recursive_opt = ''
+  endif
 '''
 
 [[plugins]]
