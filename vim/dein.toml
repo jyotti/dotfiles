@@ -76,6 +76,9 @@ hook_add = '''
 '''
 
 [[plugins]]
+repo = 'tpope/vim-surround'
+
+[[plugins]]
 repo = 'cespare/vim-toml'
 on_ft = 'toml'
 
