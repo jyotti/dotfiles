@@ -1,0 +1,32 @@
+[[plugins]]
+repo = 'Shougo/neocomplete.vim'
+if = "has('lua')"
+on_event = 'InsertEnter'
+hook_source = '''
+  execute 'source' VimHome() . '/plugins/neocomplete.vim'
+'''
+
+[[plugins]]
+repo = 'tpope/vim-surround'
+
+[[plugins]]
+repo = 'kana/vim-submode'
+hook_post_source = '''
+  " `s>`等でウィンドウのサイズ変更を連続実行
+  call submode#enter_with('bufmove', 'n', '', 's>', '<C-w>>')
+  call submode#enter_with('bufmove', 'n', '', 's<', '<C-w><')
+  call submode#enter_with('bufmove', 'n', '', 's+', '<C-w>+')
+  call submode#enter_with('bufmove', 'n', '', 's-', '<C-w>-')
+  call submode#map('bufmove', 'n', '', '>', '<C-w>>')
+  call submode#map('bufmove', 'n', '', '<', '<C-w><')
+  call submode#map('bufmove', 'n', '', '+', '<C-w>+')
+  call submode#map('bufmove', 'n', '', '-', '<C-w>-')
+'''
+
+[[plugins]]
+repo = 'junegunn/vim-emoji'
+on_event = 'InsertEnter'
+hook_source = '''
+  " http://junegunn.kr/2014/06/emoji-completion-in-vim/
+  set completefunc=emoji#complete
+'''

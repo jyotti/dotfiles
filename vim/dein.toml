@@ -1,0 +1,95 @@
+[[plugins]]
+repo = 'Shougo/dein.vim'
+
+[[plugins]]
+repo = 'Shougo/vimproc.vim'
+build = 'make'
+
+[[plugins]]
+repo = 'powerline/powerline'
+rtp = 'powerline/bindings/vim'
+hook_add = '''
+  " doc - https://powerline.readthedocs.io/en/master/tips-and-tricks.html
+  let s:powerline_vim = CacheHome() . '/dein/repos/github.com/powerline/bindings/vim'
+  set rtp+=s:powerline_vim
+'''
+
+[[plugins]]
+repo = 'altercation/vim-colors-solarized'
+hook_add = '''
+  " doc - http://ethanschoonover.com/solarized/vim-colors-solarized
+  call Msg('Configure vim-colors-solarized')
+  syntax enable
+  if has('gui_running')
+    set background=light
+  else
+    set background=dark
+  endif
+  colorscheme solarized
+  "let g:solarized_termcolors=256
+'''
+
+[[plugins]]
+repo = 'Shougo/neomru.vim'
+
+[[plugins]]
+repo = 'Shougo/unite.vim'
+depends = 'neomru.vim'
+hook_add = '''
+  " unite prefix key
+  nnoremap [unite] <Nop>
+  nmap <Leader>u [unite]
+
+  nnoremap <silent> [unite]f :<C-u>UniteWithBufferDir -buffer-name=files file file/new<CR>
+  nnoremap <silent> [unite]b :<C-u>Unite buffer<CR>
+  nnoremap <silent> [unite]u :<C-u>Unite file_mru buffer<CR>
+  nnoremap <silent> [unite]y :<C-u>Unite history/yank<CR>
+  " grep
+  nnoremap <silent> [unite]g :<C-u>Unite grep:. -buffer-name=search-buffer<CR>
+  " grep word on the cursor
+  nnoremap <silent> [unite]cg :<C-u>Unite grep:. -buffer-name=search-buffer<CR><C-R><C-W>
+
+  if executable('ag')
+    " the silver searcher
+    let g:unite_source_grep_command = 'ag'
+    let g:unite_source_grep_default_opts = '--nogroup --nocolor --column'
+    let g:unite_source_grep_recursive_opt = ''
+  endif
+'''
+
+[[plugins]]
+repo = 'Shougo/vimfiler.vim'
+depends = 'unite.vim'
+on_if = "isdirectory(bufname('%'))"
+hook_add = '''
+  " vimfilerをデフォルトに
+  let g:vimfiler_as_default_explorer = 1
+  " safe-modeをoffで起動
+  let g:vimfiler_safe_mode_by_default = 0
+  let g:vimfiler_force_overwrite_statusline = 0
+
+  let g:vimfiler_tree_leaf_icon = ' '
+ 	let g:vimfiler_tree_opened_icon = '▾'
+ 	let g:vimfiler_tree_closed_icon = '▸'
+ 	"let g:vimfiler_file_icon = '-'
+ 	let g:vimfiler_marked_file_icon = '*'
+'''
+
+[[plugins]]
+repo = 'cespare/vim-toml'
+on_ft = 'toml'
+
+# カーソル位置のftを判別
+[[plugins]]
+repo = 'Shougo/context_filetype.vim'
+
+# カーソル位置のftを切り替え
+[[plugins]]
+repo = 'osyo-manga/vim-precious'
+depends = 'context_filetype.vim'
+
+[[plugins]]
+repo = 'bronson/vim-trailing-whitespace'
+hook_add = '''
+  "let g:extra_whitespace_ignored_filetypes = ['md']
+'''
