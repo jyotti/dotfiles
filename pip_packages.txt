@@ -1,5 +1,0 @@
-# aws
-boto
-
-# powerline
-psutil
