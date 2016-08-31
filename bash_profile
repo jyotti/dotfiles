@@ -33,8 +33,8 @@ shopt -s histappend
 # Autocorrect typos in path names when using `cd`
 shopt -s cdspell
 
-# osx?
-#_isdarwin && source ~/.macos
+# macos
+_is_macos && source ${XDG_CONFIG_HOME}/bash/macos
 
 # pyenv
 if _type pyenv; then

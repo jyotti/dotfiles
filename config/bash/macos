@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 
+# Homebrew
+export PATH=/usr/local/bin:$PATH
+
 # MacVim
 macvim="/Applications/MacVim.app/Contents/MacOS/Vim"
 if [[ -f $macvim ]]; then

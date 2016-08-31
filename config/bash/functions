@@ -1,4 +1,4 @@
-function _isdarwin() {
+function _is_macos() {
   if [[ ( $OSTYPE == darwin* ) ]]; then
     return 0
   else
