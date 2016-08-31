@@ -91,5 +91,5 @@ depends = 'context_filetype.vim'
 [[plugins]]
 repo = 'bronson/vim-trailing-whitespace'
 hook_add = '''
-  "let g:extra_whitespace_ignored_filetypes = ['md']
+  let g:extra_whitespace_ignored_filetypes = ['unite','md']
 '''
