@@ -34,7 +34,7 @@ shopt -s histappend
 shopt -s cdspell
 
 # osx?
-_isdarwin && source ~/.osx
+_isdarwin && source ~/.macos
 
 # pyenv
 if _type pyenv; then
