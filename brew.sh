@@ -28,7 +28,7 @@ brew install pstree
 brew install gettext
 # macvim - use powerline
 # - https://powerline.readthedocs.org/en/latest/installation/osx.html
-brew install macvim --env-std --with-override-system-vim --with-lua
+brew install macvim --with-override-system-vim --with-lua --with-python3
 brew linkapps macvim
 # neovim
 brew install neovim/neovim/neovim
