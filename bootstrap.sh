@@ -10,9 +10,13 @@ cat << EOF
 EOF
 
 function doIt() {
-  # vim
-  cp vimrc ~/.vimrc
-  cp -r vim ~/.config/
+  # sync dotfiles
+  for file in $(ls {bashrc,bash_profile,inputrc}); do
+    cp ${file} ~/.${file}
+  done
+  unset file
+
+  cp -r config/* ~/.config/
   source ~/.bashrc
 }
 

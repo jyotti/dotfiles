@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 # Add `~/bin` to the `$PATH`
 if [[ ! -d "$HOME/bin" ]] ; then
   mkdir "$HOME/bin"
@@ -16,10 +18,8 @@ mkdir -p ${XDG_DATA_HOME}
 mkdir -p ${XDG_CONFIG_HOME}
 mkdir -p ${XDG_CACHE_HOME}
 
-# Load the shell dotfiles, and then some:
-# * ~/.path can be used to extend `$PATH`.
-# * ~/.extra can be used for other settings you don’t want to commit.
-for file in ~/.{functions,path,bash_prompt,exports,aliases,extra}; do
+# Load the shell dotfiles
+for file in ${XDG_CONFIG_HOME}/bash/{functions,bash_prompt,aliases}; do
   [ -r "$file" ] && [ -f "$file" ] && source "$file"
 done
 unset file
@@ -34,7 +34,7 @@ shopt -s histappend
 shopt -s cdspell
 
 # osx?
-_isdarwin && source ~/.macos
+#_isdarwin && source ~/.macos
 
 # pyenv
 if _type pyenv; then
