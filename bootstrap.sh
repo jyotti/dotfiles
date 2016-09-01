@@ -15,8 +15,10 @@ function doIt() {
     cp ${file} ~/.${file}
   done
   unset file
-
   cp -r config/* ~/.config/
+  # tmux
+  cp .tmux.conf ~/
+
   source ~/.bashrc
 }
 
