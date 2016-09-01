@@ -25,5 +25,53 @@ export GREP_OPTIONS="--color=auto"
 # --- `java -version`で"Picked up _JAVA_OPTIONS"と出力され、jenvのaliasがPickedに！
 ##export _JAVA_OPTIONS="-Dfile.encoding=UTF-8"
 
+# pyenv
+if _type pyenv; then
+  export PYENV_ROOT=/usr/local/var/pyenv
+  export PATH="$PYENV_ROOT/shims:$PATH"
+  eval "$(pyenv init -)"
+fi
+
+# rbenv
+if _type rbenv; then
+  export RBENV_ROOT=/usr/local/var/rbenv
+  eval "$(rbenv init -)"
+  # use chefdk ?  [[ -d "/opt/chefdk/bin" ]] && export PATH="/opt/chefdk/bin:$PATH"
+fi
+
+# jenv
+if _type jenv ; then
+  export JENV_ROOT=/usr/local/opt/jenv
+  eval "$(jenv init -)"
+fi
+
+# plenv
+if _type plenv; then
+  export PLENV_ROOT=/usr/local/opt/plenv
+  eval "$(plenv init -)"
+fi
+
+# nodebrew
+if _type nodebrew; then
+  export NODEBREW_ROOT=/usr/local/var/nodebrew
+  export PATH=$NODEBREW_ROOT/current/bin:$PATH
+fi
+
+# sdkman
+if [[ -f "$HOME/.sdkman/bin/sdkman-init.sh" ]]; then
+  export SDKMAN_DIR="$HOME/.sdkman"
+  . "$HOME/.sdkman/bin/sdkman-init.sh"
+fi
+
+# direnv
+if _type direnv; then
+  eval "$(direnv hook bash)"
+fi
+
+# Android-SDK
+if [[ -d "/usr/local/opt/android-sdk" ]]; then
+  export ANDROID_HOME=/usr/local/opt/android-sdk
+fi
+
 # awscli
 _type aws_completer && complete -C aws_completer aws

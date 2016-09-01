@@ -3,13 +3,6 @@
 # Homebrew
 export PATH=/usr/local/bin:$PATH
 
-# MacVim
-macvim="/Applications/MacVim.app/Contents/MacOS/Vim"
-if [[ -f $macvim ]]; then
-  alias vi='env LANG=ja_JP.UTF-8 "$macvim" "$@"'
-  alias vim='env_LANG=ja_JP.UTF-8 "$macvim" "$@"'
-fi
-
 # GNU coreutils
 if [[ -d $(brew --prefix coreutils)/libexec/gnubin ]]; then
   export PATH="$(brew --prefix coreutils)/libexec/gnubin:$PATH"
