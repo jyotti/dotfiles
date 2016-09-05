@@ -21,10 +21,6 @@ export MANPAGER="less -X"
 # Always enable colored `grep` output
 export GREP_OPTIONS="--color=auto"
 
-# encoding java
-# --- `java -version`で"Picked up _JAVA_OPTIONS"と出力され、jenvのaliasがPickedに！
-##export _JAVA_OPTIONS="-Dfile.encoding=UTF-8"
-
 # pyenv
 if _type pyenv; then
   export PYENV_ROOT=/usr/local/var/pyenv
@@ -36,7 +32,6 @@ fi
 if _type rbenv; then
   export RBENV_ROOT=/usr/local/var/rbenv
   eval "$(rbenv init -)"
-  # use chefdk ?  [[ -d "/opt/chefdk/bin" ]] && export PATH="/opt/chefdk/bin:$PATH"
 fi
 
 # jenv
@@ -74,4 +69,11 @@ if [[ -d "/usr/local/opt/android-sdk" ]]; then
 fi
 
 # awscli
-_type aws_completer && complete -C aws_completer aws
+if which aws_completer &> /dev/null; then
+  complete -C aws_completer aws
+fi
+
+# GNU coreutils
+if which brew &> /dev/null && [[ -d $(brew --prefix coreutils)/libexec/gnubin ]]; then
+  export PATH="$(brew --prefix coreutils)/libexec/gnubin:$PATH"
+fi
