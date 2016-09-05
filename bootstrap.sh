@@ -15,12 +15,16 @@ function doIt() {
     cp ${file} ~/.${file}
   done
   unset file
+  # .config
   cp -r config/* ~/.config/
   # vim
   cp vimrc ~/.vimrc
   # tmux
-  cp .tmux.conf ~/
-
+  cp tmux.conf ~/.tmux.conf
+  # git
+  cp git/gitconfig ~/.gitconfig
+  cp git/gitignore ~/.gitignore
+  # bash
   source ~/.bashrc
 }
 
