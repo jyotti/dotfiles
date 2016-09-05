@@ -1,5 +1,10 @@
 #!/usr/bin/env bash
 
+# Add `/usr/local/bin` to the `$PATH`
+if [[ -d "/usr/local/bin" ]] ; then
+  export PATH="/usr/local/bin:$PATH"
+fi
+
 # Add `~/bin` to the `$PATH`
 if [[ ! -d "$HOME/bin" ]] ; then
   mkdir "$HOME/bin"
