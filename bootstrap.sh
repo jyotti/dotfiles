@@ -16,6 +16,8 @@ function doIt() {
   done
   unset file
   cp -r config/* ~/.config/
+  # vim
+  cp vimrc ~/.vimrc
   # tmux
   cp .tmux.conf ~/
 
