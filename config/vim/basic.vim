@@ -90,7 +90,9 @@ set clipboard+=unnamed
 
 " すべてのモードでマウスを有効に
 set mouse=a
-set ttymouse=xterm2
+if !has('nvim')
+  set ttymouse=xterm2
+endif
 
 " ノーマルモード時に自動でペーストモードを解除する
 autocmd InsertLeave * set nopaste
