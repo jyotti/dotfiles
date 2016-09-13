@@ -14,7 +14,7 @@ if !isdirectory(s:dein_repo_dir)
 endif
 execute 'set runtimepath^=' . s:dein_repo_dir
 
-" Enable python3
+" *** neovim ***
 if !empty($PYENV_ROOT)
   call Msg('Found $PYENV_ROOT')
   let g:python3_host_prog = expand('$PYENV_ROOT/shims/python')
