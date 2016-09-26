@@ -8,7 +8,7 @@ brew upgrade
 
 # Use Bash
 brew install bash
-brew install bash-completion
+brew install bash-completion2 #for Bash 4.0+
 
 # GNU core utilities
 brew install coreutils --with-gmp
