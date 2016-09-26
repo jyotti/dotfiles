@@ -24,7 +24,7 @@ mkdir -p ${XDG_CONFIG_HOME}
 mkdir -p ${XDG_CACHE_HOME}
 
 # Load the shell dotfiles
-for file in ${XDG_CONFIG_HOME}/bash/{functions,bash_prompt,aliases,exports}; do
+for file in ${XDG_CONFIG_HOME}/bash/{path,functions,bash_prompt,aliases,exports}; do
   [ -r "$file" ] && [ -f "$file" ] && source "$file"
 done
 unset file

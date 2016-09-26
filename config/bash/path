@@ -1,0 +1,4 @@
+if [ -d $(brew --prefix)/opt/coreutils/libexec/gnubin ]; then
+  PATH="$(brew --prefix)/opt/coreutils/libexec/gnubin:$PATH"
+  MANPATH="$(brew --prefix)/opt/coreutils/libexec/gnuman:$MANPATH"
+fi
