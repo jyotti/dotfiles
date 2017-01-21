@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
-cd "$(dirname "${BASH_SOURCE}")"
+
+cd "$(dirname "$BASH_SOURCE")" || exit 1
 
 cat << EOF
         ∧__∧
@@ -9,33 +10,27 @@ cat << EOF
 
 EOF
 
-function doIt() {
-  # sync dotfiles
-  for file in $(ls {bashrc,bash_profile,inputrc}); do
-    cp ${file} ~/.${file}
-  done
-  unset file
-  # .config
-  cp -r config/* ~/.config/
-  # vim
-  cp vimrc ~/.vimrc
-  # tmux
-  cp tmux.conf ~/.tmux.conf
-  # git
-  cp git/gitconfig ~/.gitconfig
-  cp git/gitignore ~/.gitignore
-  # bash
-  source ~/.bashrc
-}
-
-if [ "$1" == "--force" -o "$1" == "-f" ]; then
-  doIt
-else
-  read -p "This may overwrite existing files in your home directory. Are you sure? (y/n) " -n 1
-  echo
-  if [[ $REPLY =~ ^[Yy]$ ]]; then
-    doIt
+if [[ ! "$1" == "--force" ]] && [[ ! "$1" == "-f" ]]; then
+  read -n 1 -r -p "This may overwrite existing files in your home directory. Are you sure? (y/n) " yesno
+  echo "";
+  if [[ ! "$yesno" =~ ^[Yy]$ ]]; then
+    exit
   fi
 fi
 
-unset doIt
+dotfiles=(
+  bashrc
+  bash_profile
+  inputrc
+  vimrc
+  tmux.conf
+) 
+
+echo "\n=====> Copy dotfiles to HOME ..."
+for f in "${dotfiles[@]}"; do
+  cp -v "${f}" "${HOME}/.${f}"
+done
+
+echo "\n=====> Copy other files to XDG_CONFIG_HOME ..."
+mkdir -p "${HOME}"/.config
+cp -rv config/*      "${HOME}"/.config/
