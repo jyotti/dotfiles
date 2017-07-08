@@ -2,3 +2,9 @@ if [ -d $(brew --prefix)/opt/coreutils/libexec/gnubin ]; then
   PATH="$(brew --prefix)/opt/coreutils/libexec/gnubin:$PATH"
   MANPATH="$(brew --prefix)/opt/coreutils/libexec/gnuman:$MANPATH"
 fi
+
+if [ -d $(brew --prefix)/opt/gnu-tar/libexec/gnubin ]; then
+  PATH="$(brew --prefix)/opt/gnu-tar/libexec/gnubin:$PATH"
+  export MANPATH="$(brew --prefix)/opt/gnu-tar/libexec/gnuman:$MANPATH"
+fi
+
