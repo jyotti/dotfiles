@@ -13,6 +13,8 @@ brew install bash-completion2 #for Bash 4.0+
 # GNU core utilities
 brew install coreutils --with-gmp
 brew install gnu-tar
+# Install GNU find, locate, updatedb, xargs
+brew install findutils
 
 # IRIサポートのwget
 brew install wget --with-iri

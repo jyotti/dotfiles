@@ -8,3 +8,7 @@ if [ -d $(brew --prefix)/opt/gnu-tar/libexec/gnubin ]; then
   export MANPATH="$(brew --prefix)/opt/gnu-tar/libexec/gnuman:$MANPATH"
 fi
 
+if [ -d $(brew --prefix)/opt/findutils/libexec/gnubin ]; then
+  PATH="$(brew --prefix)/opt/findutils/libexec/gnubin:$PATH"
+  export MANPATH="$(brew --prefix)/opt/findutils/libexec/gnuman:$MANPATH"
+fi
