@@ -15,6 +15,7 @@ brew install coreutils --with-gmp
 brew install gnu-tar
 # Install GNU find, locate, updatedb, xargs
 brew install findutils
+brew install make
 
 # IRIサポートのwget
 brew install wget --with-iri

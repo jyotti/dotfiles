@@ -12,3 +12,8 @@ if [ -d $(brew --prefix)/opt/findutils/libexec/gnubin ]; then
   PATH="$(brew --prefix)/opt/findutils/libexec/gnubin:$PATH"
   export MANPATH="$(brew --prefix)/opt/findutils/libexec/gnuman:$MANPATH"
 fi
+
+if [ -d $(brew --prefix)/opt/make/libexec/gnubin ]; then
+  PATH="$(brew --prefix)/opt/findutils/libexec/gnubin:$PATH"
+  export MANPATH="$(brew --prefix)/opt/make/libexec/gnuman:$MANPATH"
+fi
