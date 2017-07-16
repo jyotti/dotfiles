@@ -24,7 +24,7 @@ dotfiles=(
   inputrc
   vimrc
   tmux.conf
-) 
+)
 
 echo "\n=====> Copy dotfiles to HOME ..."
 for f in "${dotfiles[@]}"; do
@@ -34,3 +34,5 @@ done
 echo "\n=====> Copy other files to XDG_CONFIG_HOME ..."
 mkdir -p "${HOME}"/.config
 cp -rv config/*      "${HOME}"/.config/
+
+exec $SHELL
