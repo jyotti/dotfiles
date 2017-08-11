@@ -77,3 +77,7 @@ fi
 if which brew &> /dev/null && [[ -d $(brew --prefix coreutils)/libexec/gnubin ]]; then
   export PATH="$(brew --prefix coreutils)/libexec/gnubin:$PATH"
 fi
+
+# Go lang
+export GOPATH=$HOME/dev
+export PATH=$PATH:$GOPATH

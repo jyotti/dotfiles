@@ -22,6 +22,8 @@ export XDG_CACHE_HOME=$HOME/.cache
 mkdir -p ${XDG_DATA_HOME}
 mkdir -p ${XDG_CONFIG_HOME}
 mkdir -p ${XDG_CACHE_HOME}
+# Development HOME
+mkdir -p $HOME/dev
 
 # Load the shell dotfiles
 for file in ${XDG_CONFIG_HOME}/bash/{path,functions,bash_prompt,aliases,exports}; do
