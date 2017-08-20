@@ -1,18 +1,27 @@
+# openssl
+if [ -d $(brew --prefix)/opt/openssl/bin ]; then
+  PATH="$(brew --prefix)/opt/openssl/bin:$PATH"
+fi
+
+# coreutils
 if [ -d $(brew --prefix)/opt/coreutils/libexec/gnubin ]; then
   PATH="$(brew --prefix)/opt/coreutils/libexec/gnubin:$PATH"
   MANPATH="$(brew --prefix)/opt/coreutils/libexec/gnuman:$MANPATH"
 fi
 
+# gnu-tar
 if [ -d $(brew --prefix)/opt/gnu-tar/libexec/gnubin ]; then
   PATH="$(brew --prefix)/opt/gnu-tar/libexec/gnubin:$PATH"
   export MANPATH="$(brew --prefix)/opt/gnu-tar/libexec/gnuman:$MANPATH"
 fi
 
+# findutils
 if [ -d $(brew --prefix)/opt/findutils/libexec/gnubin ]; then
   PATH="$(brew --prefix)/opt/findutils/libexec/gnubin:$PATH"
   export MANPATH="$(brew --prefix)/opt/findutils/libexec/gnuman:$MANPATH"
 fi
 
+# make
 if [ -d $(brew --prefix)/opt/make/libexec/gnubin ]; then
   PATH="$(brew --prefix)/opt/make/libexec/gnubin:$PATH"
   export MANPATH="$(brew --prefix)/opt/make/libexec/gnuman:$MANPATH"
