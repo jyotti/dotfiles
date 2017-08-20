@@ -31,6 +31,7 @@ brew "the_silver_searcher"
 brew "jq"
 brew "reattach-to-user-namespace"
 brew "unzip"
+brew "hub"
 
 # apps
 brew "git"
