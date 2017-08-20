@@ -37,9 +37,7 @@ brew linkapps macvim
 # neovim
 brew install neovim/neovim/neovim
 
-# tmux
 brew install tmux
-# - tmuxとosでクリップボードを共有するために使う
 brew install reattach-to-user-namespace
 
 # Development

@@ -26,12 +26,12 @@ dotfiles=(
   tmux.conf
 )
 
-echo "\n=====> Copy dotfiles to HOME ..."
+echo -e "\n=====> Copy dotfiles to HOME ..."
 for f in "${dotfiles[@]}"; do
   cp -v "${f}" "${HOME}/.${f}"
 done
 
-echo "\n=====> Copy other files to XDG_CONFIG_HOME ..."
+echo -e "\n=====> Copy other files to XDG_CONFIG_HOME ..."
 mkdir -p "${HOME}"/.config
 cp -rv config/*      "${HOME}"/.config/
 

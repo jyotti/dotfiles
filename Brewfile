@@ -15,9 +15,11 @@ brew "openssl"
 # GNU libs
 brew "coreutils", args: ["with-gmp"]
 brew "gnu-tar"
+brew "gnu-sed", args: ["with-default-names"]
 brew "findutils"
 brew "make"
 brew "grep", args: ["with-default-names"]
+brew "gzip"
 
 # More utils
 brew "wget", args: ["with-iri"]
@@ -28,6 +30,7 @@ brew "gettext"
 brew "the_silver_searcher"
 brew "jq"
 brew "reattach-to-user-namespace"
+brew "unzip"
 
 # apps
 brew "git"
@@ -59,7 +62,23 @@ brew "macvim", args: ["with-lua", "with-override-system-vim", "with-python3", "w
 # brew "fontforge"
 # brew "sanemat/font/ricty", args: ["with-powerline"]
 
+cask "virtualbox"
 cask "vagrant"
+cask "visual-studio-code"
+
+# https://github.com/sindresorhus/quick-look-plugins
+cask "qlcolorcode"
+cask "qlstephen"
+cask "qlmarkdown"
+cask "quicklook-json"
+cask "qlprettypatch"
+cask "quicklook-csv"
+cask "betterzipql"
+cask "qlimagesize"
+cask "webpquicklook"
+cask "suspicious-package"
+cask "quicklookase"
+cask "qlvideo"
 
 # => caskroom/versions
 cask "java7"

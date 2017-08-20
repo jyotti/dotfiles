@@ -26,3 +26,8 @@ if [ -d $(brew --prefix)/opt/make/libexec/gnubin ]; then
   PATH="$(brew --prefix)/opt/make/libexec/gnubin:$PATH"
   export MANPATH="$(brew --prefix)/opt/make/libexec/gnuman:$MANPATH"
 fi
+
+# unzip
+if [ -d $(brew --prefix)/opt/unzip/bin ]; then
+  PATH="$(brew --prefix)/opt/unzip/bin:$PATH"
+fi
