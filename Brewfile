@@ -46,7 +46,8 @@ brew "ruby-build"
 brew "rbenv"
 brew "jenv"
 brew "plenv"
-brew "nodebrew"
+brew "node-build"   #Dependencies with nodenv
+brew "nodenv"
 brew "direnv"
 
 # Go lang

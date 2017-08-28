@@ -43,10 +43,10 @@ if _type plenv; then
   eval "$(plenv init -)"
 fi
 
-# nodebrew
-if _type nodebrew; then
-  export NODEBREW_ROOT=/usr/local/var/nodebrew
-  export PATH=$NODEBREW_ROOT/current/bin:$PATH
+# nodenv
+if _type nodenv; then
+  export NODENV_ROOT=/usr/local/opt/nodenv
+  eval "$(nodenv init -)"
 fi
 
 # sdkman
