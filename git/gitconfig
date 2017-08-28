@@ -22,5 +22,10 @@
   clean = git-lfs clean %f
   smudge = git-lfs smudge %f
   required = true
+
+[url "git@github.com:"]
+  pushinsteadof = "https://github.com/"
+  pushinsteadof = "git://github.com/"
+
 [ghq]
 	root = ~/dev/src
