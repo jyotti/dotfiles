@@ -82,4 +82,6 @@ cask "quicklookase"
 cask "qlvideo"
 
 # => caskroom/versions
-cask "java7"
+
+# Use zulu7 instead of java 7 - https://github.com/caskroom/homebrew-versions/pull/3914#issuecomment-321538649
+cask "zulu7"
