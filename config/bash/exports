@@ -72,4 +72,4 @@ fi
 
 # Go lang
 export GOPATH=$HOME/dev
-export PATH=$PATH:$GOPATH
+export PATH=$PATH:$GOPATH/bin
