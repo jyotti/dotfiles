@@ -31,11 +31,6 @@ for file in ${XDG_CONFIG_HOME}/bash/{path,functions,bash_prompt,aliases,exports}
 done
 unset file
 
-# macos
-if _is_macos; then
-  source ${XDG_CONFIG_HOME}/bash/macos
-fi
-
 # Case-insensitive globbing (used in pathname expansion)
 shopt -s nocaseglob
 
