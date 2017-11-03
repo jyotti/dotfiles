@@ -1,13 +1,12 @@
 tap "homebrew/bundle"
 tap "homebrew/services"
 tap "caskroom/cask"
+brew "brew-cask-completion"
 tap "caskroom/versions"
-
-cask "java"
 
 # Use Bash
 brew "bash"
-brew "bash-completion2" #for Bash 4.0+
+brew "bash-completion@2" #for Bash 4.1+
 
 # core
 brew "openssl"
@@ -20,7 +19,6 @@ brew "findutils"
 brew "make"
 brew "grep", args: ["with-default-names"]
 brew "gzip"
-
 # More utils
 brew "wget", args: ["with-iri"]
 brew "tree"
@@ -31,42 +29,47 @@ brew "the_silver_searcher"
 brew "jq"
 brew "reattach-to-user-namespace"
 brew "unzip"
-brew "hub"
+brew "nkf"
 
-# apps
+# for Git
 brew "git"
 brew "git-now"
+brew "hub"
 brew "tig"
+
 brew "tmux"
+brew "macvim", args: ["with-lua", "with-override-system-vim", "with-python3", "without-python"]
 
 # developments
+cask "java"
+cask "caskroom/versions/java8"
+cask "caskroom/versions/zulu7" #Use zulu7 instead of java 7 - https://github.com/caskroom/homebrew-versions/pull/3914#issuecomment-321538649
 brew "pyenv"
 brew "pyenv-virtualenv"
-brew "ruby-build"
+brew "pip-completion"
+brew "ruby-build"   #depends on rbenv
 brew "rbenv"
 brew "jenv"
 brew "plenv"
-brew "node-build"   #Dependencies with nodenv
+brew "node-build"   #depends on nodenv
 brew "nodenv"
 brew "direnv"
-
-# Go lang
 brew "go"
+
+# Go modules
 brew "ghq"
 brew "glide"
 brew "peco"
 
-# vim
-brew "macvim", args: ["with-lua", "with-override-system-vim", "with-python3", "without-python"]
+# Ricty - https://github.com/sanemat/homebrew-font
+tap "sanemat/font"
+brew "fontforge"
+brew "sanemat/font/ricty", args: ["with-powerline"]
 
-## Install Ricty font - https://github.com/sanemat/homebrew-font
-# tap "sanemat/font"
-# brew "fontforge"
-# brew "sanemat/font/ricty", args: ["with-powerline"]
-
-cask "virtualbox"
-cask "vagrant"
+cask "google-chrome"
+cask "slack"
 cask "visual-studio-code"
+cask "cheatsheet"
 
 # https://github.com/sindresorhus/quick-look-plugins
 cask "qlcolorcode"
@@ -82,7 +85,11 @@ cask "suspicious-package"
 cask "quicklookase"
 cask "qlvideo"
 
-# => caskroom/versions
-
-# Use zulu7 instead of java 7 - https://github.com/caskroom/homebrew-versions/pull/3914#issuecomment-321538649
-cask "zulu7"
+cask "docker"
+brew "docker-completion"
+brew "docker-machine-completion"
+brew "docker-compose-completion"
+cask "caskroom/versions/google-chrome-canary"
+cask "virtualbox"
+cask "vagrant"
+brew "vagrant-completion"
