@@ -30,6 +30,7 @@ brew "jq"
 brew "reattach-to-user-namespace"
 brew "unzip"
 brew "nkf"
+brew "less"
 
 # for Git
 brew "git"
