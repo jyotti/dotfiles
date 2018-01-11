@@ -1,2 +1,4 @@
 powerline-status
 psutil
+awscli
+
