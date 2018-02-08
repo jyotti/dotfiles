@@ -67,7 +67,7 @@ brew "peco"
 # Ricty - https://github.com/sanemat/homebrew-font
 tap "sanemat/font"
 brew "fontforge"
-brew "sanemat/font/ricty", args: ["with-powerline"]
+brew "ricty", args: ["with-powerline"]
 
 cask "google-chrome"
 cask "slack"
