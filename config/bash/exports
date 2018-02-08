@@ -21,8 +21,13 @@ export MANPAGER="less -X"
 # pyenv
 if _type pyenv; then
   export PYENV_ROOT=/usr/local/var/pyenv
-  export PATH="$PYENV_ROOT/shims:$PATH"
-  eval "$(pyenv init -)"
+#  export PATH="$PYENV_ROOT/shims:$PATH"
+#  eval "$(pyenv init -)"
+fi
+
+## Homebrew python
+if [ -d "$(brew --prefix)/opt/python/libexec/bin" ]; then
+  PATH="$(brew --prefix)/opt/python/libexec/bin:$PATH"
 fi
 
 # rbenv

@@ -11,6 +11,9 @@ brew "bash-completion@2" #for Bash 4.1+
 # core
 brew "openssl"
 
+brew "python"
+brew "python3"
+
 # GNU libs
 brew "coreutils", args: ["with-gmp"]
 brew "gnu-tar"
@@ -46,7 +49,6 @@ cask "java"
 cask "caskroom/versions/java8"
 cask "caskroom/versions/zulu7" #Use zulu7 instead of java 7 - https://github.com/caskroom/homebrew-versions/pull/3914#issuecomment-321538649
 brew "pyenv"
-brew "pyenv-virtualenv"
 brew "pip-completion"
 brew "ruby-build"   #depends on rbenv
 brew "rbenv"

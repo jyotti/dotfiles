@@ -15,7 +15,7 @@ endif
 execute 'set runtimepath^=' . s:dein_repo_dir
 
 " *** neovim ***
-if !empty($PYENV_ROOT)
-  call Msg('Found $PYENV_ROOT')
-  let g:python3_host_prog = expand('$PYENV_ROOT/shims/python')
-endif
+""" if !empty($PYENV_ROOT)
+"""   call Msg('Found $PYENV_ROOT')
+"""   let g:python3_host_prog = expand('$PYENV_ROOT/shims/python')
+""" endif
