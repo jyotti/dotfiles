@@ -12,7 +12,7 @@ brew "bash-completion@2" #for Bash 4.1+
 brew "openssl"
 
 brew "python"
-brew "python3"
+brew "python@2"
 
 # GNU libs
 brew "coreutils", args: ["with-gmp"]
@@ -42,7 +42,7 @@ brew "hub"
 brew "tig"
 
 brew "tmux"
-brew "macvim", args: ["with-lua", "with-override-system-vim", "with-python3", "without-python"]
+brew "macvim", args: ["with-lua", "with-override-system-vim"]
 
 # developments
 cask "java"

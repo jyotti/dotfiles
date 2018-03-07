@@ -25,9 +25,9 @@ if _type pyenv; then
 #  eval "$(pyenv init -)"
 fi
 
-## Homebrew python
-if [ -d "$(brew --prefix)/opt/python/libexec/bin" ]; then
-  PATH="$(brew --prefix)/opt/python/libexec/bin:$PATH"
+## Homebrew python2
+if [ -d "$(brew --prefix)/opt/python@2/bin" ]; then
+  PATH="$(brew --prefix)/opt/python@2/bin:$PATH"
 fi
 
 # rbenv
