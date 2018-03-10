@@ -64,6 +64,10 @@ brew "ghq"
 brew "glide"
 brew "peco"
 
+# Module by Homebrew-python
+brew "awscli"
+brew "ansible"
+
 # Ricty - https://github.com/sanemat/homebrew-font
 tap "sanemat/font"
 brew "fontforge"
