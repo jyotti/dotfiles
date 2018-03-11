@@ -25,10 +25,9 @@ if _type pyenv; then
 #  eval "$(pyenv init -)"
 fi
 
-## Homebrew python2
-if [ -d "$(brew --prefix)/opt/python@2/bin" ]; then
-  PATH="$(brew --prefix)/opt/python@2/bin:$PATH"
-fi
+## Homebrew Python
+# - python  => python@2
+# - python3 => python3
 
 # rbenv
 if _type rbenv; then
