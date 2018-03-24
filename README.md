@@ -12,7 +12,7 @@
 - Command Line Tools (CLT) for Xcode `xcode-select --install`
 - [Homebrew](https://brew.sh/)
 
-### Install formulae and dotfiles
+### Install formula and dotfiles
 
 Install formula with Hombrew-bundle
 
