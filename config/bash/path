@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 # openssl
 if [ -d $(brew --prefix)/opt/openssl/bin ]; then
   PATH="$(brew --prefix)/opt/openssl/bin:$PATH"
@@ -30,4 +32,9 @@ fi
 # unzip
 if [ -d $(brew --prefix)/opt/unzip/bin ]; then
   PATH="$(brew --prefix)/opt/unzip/bin:$PATH"
+fi
+
+# curl
+if [ -d $(brew --prefix)/opt/curl/bin ]; then
+  PATH="$(brew --prefix)/opt/curl/bin:$PATH"
 fi

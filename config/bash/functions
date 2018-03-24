@@ -1,22 +1,22 @@
-function _is_macos() {
-  if [[ ( $OSTYPE == darwin* ) ]]; then
-    return 0
-  else
-    return 1
+#!/usr/bin/env bash
+
+function docker-mc-env {
+  local machine=$1
+  if which docker-machine &> /dev/null; then
+    eval $(docker-machine env $machine);
   fi
 }
 
-function _type() {
-  if type $1 > /dev/null 2>&1; then
-    return 0
-  else
-    return 1
+function docker-mc-env-unset {
+  local machine=$1
+  if which docker-machine &> /dev/null; then
+    eval $(docker-machine env --unset);
   fi
 }
 
 function assume-role {
   if which assume-role &> /dev/null; then
-    eval $( $(which assume-role) $@); 
+    eval $( $(which assume-role) $@);
   fi
 }
 

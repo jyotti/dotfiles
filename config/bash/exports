@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 # Make vim the default editor
 export EDITOR="vim"
 
@@ -19,48 +21,38 @@ export LESS_TERMCAP_md="$ORANGE"
 export MANPAGER="less -X"
 
 # pyenv
-if _type pyenv; then
+if type pyenv > /dev/null 2>&1; then
   export PYENV_ROOT=/usr/local/var/pyenv
 #  export PATH="$PYENV_ROOT/shims:$PATH"
 #  eval "$(pyenv init -)"
 fi
 
-## Homebrew Python
-# - python  => python@2
-# - python3 => python3
-
 # rbenv
-if _type rbenv; then
+if type rbenv > /dev/null 2>&1; then
   export RBENV_ROOT=/usr/local/var/rbenv
   eval "$(rbenv init -)"
 fi
 
 # jenv
-if _type jenv ; then
+if type jenv > /dev/null 2>&1; then
   export JENV_ROOT=/usr/local/var/jenv
   eval "$(jenv init -)"
 fi
 
 # plenv
-if _type plenv; then
+if type plenv > /dev/null 2>&1; then
   export PLENV_ROOT=/usr/local/opt/plenv
   eval "$(plenv init -)"
 fi
 
 # nodenv
-if _type nodenv; then
+if type nodenv > /dev/null 2>&1; then
   export NODENV_ROOT=/usr/local/opt/nodenv
   eval "$(nodenv init -)"
 fi
 
-# sdkman
-if [[ -f "$HOME/.sdkman/bin/sdkman-init.sh" ]]; then
-  export SDKMAN_DIR="$HOME/.sdkman"
-  . "$HOME/.sdkman/bin/sdkman-init.sh"
-fi
-
 # direnv
-if _type direnv; then
+if type direnv > /dev/null 2>&1; then
   eval "$(direnv hook bash)"
 fi
 
@@ -70,11 +62,12 @@ if [ -d "/usr/local/share/android-sdk" ]; then
   export ANDROID_SDK_ROOT=/usr/local/share/android-sdk
 fi
 
-# awscli
-if which aws_completer &> /dev/null; then
-  complete -C aws_completer aws
-fi
-
 # Go lang
 export GOPATH=$HOME/dev
 export PATH=$PATH:$GOPATH/bin
+
+# sdkman
+if [ -f "$HOME/.sdkman/bin/sdkman-init.sh" ]; then
+  export SDKMAN_DIR="$HOME/.sdkman"
+  . "$HOME/.sdkman/bin/sdkman-init.sh"
+fi

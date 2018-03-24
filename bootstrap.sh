@@ -35,4 +35,10 @@ echo -e "\n=====> Copy other files to XDG_CONFIG_HOME ..."
 mkdir -p "${HOME}"/.config
 cp -rv config/*      "${HOME}"/.config/
 
+# Use brew-installed shell as the default shell
+if ! grep -q /usr/local/bin/bash /etc/shells; then
+    echo '/usr/local/bin/bash' | sudo tee -a /etc/shells;
+    chsh -s /usr/local/bin/bash;
+fi
+
 exec $SHELL

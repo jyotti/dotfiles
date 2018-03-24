@@ -1,12 +1,12 @@
 #!/usr/bin/env bash
 
 # Add `/usr/local/bin` to the `$PATH`
-if [[ -d "/usr/local/bin" ]] ; then
+if [ -d "/usr/local/bin" ] ; then
   export PATH="/usr/local/bin:$PATH"
 fi
 
 # Add `~/bin` to the `$PATH`
-if [[ ! -d "$HOME/bin" ]] ; then
+if [ ! -d "$HOME/bin" ] ; then
   mkdir "$HOME/bin"
 fi
 export PATH="$HOME/bin:$PATH"
@@ -43,4 +43,10 @@ shopt -s cdspell
 # Bash completion
 if which brew &> /dev/null && [ -f $(brew --prefix)/share/bash-completion/bash_completion ]; then
   source $(brew --prefix)/share/bash-completion/bash_completion
+fi
+
+# npm completion
+if type npm &> /dev/null && [ -d /usr/local/etc/bash_completion.d ] && [ ! -f /usr/local/etc/bash_completion.d/npm ]; then
+    echo 'Install npm completion'
+    npm completion > /usr/local/etc/bash_completion.d/npm
 fi

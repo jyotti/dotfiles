@@ -1,0 +1,33 @@
+tap "caskroom/cask"
+tap "caskroom/versions"
+brew "brew-cask-completion"
+
+cask "java"
+cask "caskroom/versions/java8"
+cask "caskroom/versions/zulu7" #Use zulu7 instead of java 7 - https://github.com/caskroom/homebrew-versions/pull/3914#issuecomment-321538649
+
+# Applications
+cask "google-chrome"
+cask "caskroom/versions/google-chrome-canary"
+cask "slack"
+cask "visual-studio-code"
+cask "cheatsheet"
+
+cask "virtualbox"
+cask "docker"
+cask "vagrant"
+
+# Useful applications
+# https://github.com/sindresorhus/quick-look-plugins
+cask "qlcolorcode"
+cask "qlstephen"
+cask "qlmarkdown"
+cask "quicklook-json"
+cask "qlprettypatch"
+cask "quicklook-csv"
+cask "betterzipql"
+cask "qlimagesize"
+cask "webpquicklook"
+cask "suspicious-package"
+cask "quicklookase"
+cask "qlvideo"
