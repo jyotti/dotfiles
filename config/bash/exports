@@ -27,6 +27,9 @@ if type pyenv > /dev/null 2>&1; then
 #  eval "$(pyenv init -)"
 fi
 
+# Pipenv
+export PIPENV_VENV_IN_PROJECT=true
+
 # rbenv
 if type rbenv > /dev/null 2>&1; then
   export RBENV_ROOT=/usr/local/var/rbenv
