@@ -47,6 +47,10 @@ fi
 
 # npm completion
 if type npm &> /dev/null && [ -d /usr/local/etc/bash_completion.d ] && [ ! -f /usr/local/etc/bash_completion.d/npm ]; then
-    echo 'Install npm completion'
     npm completion > /usr/local/etc/bash_completion.d/npm
+fi
+
+# terraform completion
+if type terraform &> /dev/null; then
+    complete -C terraform terraform
 fi
