@@ -54,3 +54,8 @@ fi
 if type terraform &> /dev/null; then
     complete -C terraform terraform
 fi
+
+# Pipenv completion
+if type pipenv &> /dev/null; then
+    eval "$(pipenv --completion)"
+fi
