@@ -10,10 +10,11 @@ Thumbs.db
 # Vim
 .*.un~
 
-# IntelliJ
+# JetBrains
 *.iml
 *.ipr
 *.iws
+.idea/
 
 # env
 .envrc
