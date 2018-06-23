@@ -57,6 +57,7 @@ brew "glide"
 brew "peco"
 
 # Module by Homebrew-python
+brew "pipenv"
 brew "awscli"
 brew "ansible"
 
