@@ -3,6 +3,9 @@
 # openssl
 if [ -d $(brew --prefix)/opt/openssl/bin ]; then
   PATH="$(brew --prefix)/opt/openssl/bin:$PATH"
+  export LDFLAGS="-L$(brew --prefix)/opt/openssl/lib"
+  export CPPFLAGS="-I$(brew --prefix)/openssl/include"
+  export PKG_CONFIG_PATH="$(brew --prefix)/opt/openssl/lib/pkgconfig"
 fi
 
 # coreutils
