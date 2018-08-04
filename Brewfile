@@ -39,6 +39,8 @@ brew "reattach-to-user-namespace"
 brew "the_silver_searcher"
 brew "jq"
 brew "nkf"
+brew "shellcheck"
+brew "gibo"
 
 # version managements
 brew "pyenv"
