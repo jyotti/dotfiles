@@ -7,11 +7,6 @@ cask "caskroom/versions/java8"
 cask "caskroom/versions/zulu7" #Use zulu7 instead of java 7 - https://github.com/caskroom/homebrew-versions/pull/3914#issuecomment-321538649
 
 # Applications
-cask "google-chrome"
-cask "caskroom/versions/google-chrome-canary"
-cask "slack"
-cask "visual-studio-code"
-
 cask "virtualbox"
 cask "docker"
 cask "vagrant"
