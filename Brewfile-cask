@@ -8,7 +8,6 @@ cask "caskroom/versions/zulu7" #Use zulu7 instead of java 7 - https://github.com
 
 # Applications
 cask "virtualbox"
-cask "docker"
 cask "vagrant"
 
 # Useful applications
@@ -19,7 +18,6 @@ cask "qlmarkdown"
 cask "quicklook-json"
 cask "qlprettypatch"
 cask "quicklook-csv"
-cask "betterzipql"
 cask "qlimagesize"
 cask "webpquicklook"
 cask "suspicious-package"
