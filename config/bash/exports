@@ -74,3 +74,8 @@ if [ -f "$HOME/.sdkman/bin/sdkman-init.sh" ]; then
   export SDKMAN_DIR="$HOME/.sdkman"
   . "$HOME/.sdkman/bin/sdkman-init.sh"
 fi
+
+# mysql-client
+if [ -d $(brew --prefix)/opt/mysql-client/bin ]; then
+  PATH="$(brew --prefix)/opt/mysql-client/bin:$PATH"
+fi
