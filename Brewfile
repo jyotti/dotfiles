@@ -42,6 +42,10 @@ brew "nkf"
 brew "shellcheck"
 brew "gibo"
 
+# CLI
+brew "node"
+brew "yarn"
+
 # version managements
 brew "pyenv"
 brew "ruby-build"   #depends on rbenv
@@ -76,3 +80,4 @@ brew "docker-machine-completion"
 brew "docker-compose-completion"
 brew "vagrant-completion"
 brew "django-completion"
+brew "yarn-completion"
