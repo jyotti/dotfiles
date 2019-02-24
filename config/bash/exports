@@ -21,10 +21,8 @@ export LESS_TERMCAP_md="$ORANGE"
 export MANPAGER="less -X"
 
 # pyenv
-if type pyenv > /dev/null 2>&1; then
-  export PYENV_ROOT=/usr/local/var/pyenv
-#  export PATH="$PYENV_ROOT/shims:$PATH"
-#  eval "$(pyenv init -)"
+if [ -f $(brew --prefix)/bin/pyenv ]; then
+  eval "$(pyenv init -)"
 fi
 
 # Pipenv
