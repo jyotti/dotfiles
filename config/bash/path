@@ -41,3 +41,11 @@ fi
 if [ -d $(brew --prefix)/opt/curl/bin ]; then
   PATH="$(brew --prefix)/opt/curl/bin:$PATH"
 fi
+
+# Ruby
+if [ -d $(brew --prefix)/opt/ruby/bin ]; then
+  export PATH="$(brew --prefix)/opt/ruby/bin:$PATH"
+  export LDFLAGS="-L$(brew --prefix)/opt/ruby/lib $LDFLAGS"
+  export CPPFLAGS="-I$(brew --prefix)/opt/ruby/include $CPPFLAGS"
+fi
+

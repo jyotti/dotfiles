@@ -7,6 +7,9 @@ brew "bash"
 brew "python"
 brew "python@2"
 
+# Homebrew Ruby
+brew "ruby"
+
 # GNU File, Shell, and Text utilities
 brew "coreutils", args: ["with-gmp"]
 brew "findutils" # find, xargs, and locate
