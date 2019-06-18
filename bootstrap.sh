@@ -41,4 +41,4 @@ cp -rv config/*      "${HOME}"/.config/
 ##    chsh -s /usr/local/bin/bash;
 ##fi
 
-exec $SHELL
+#exec $SHELL

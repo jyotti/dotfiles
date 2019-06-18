@@ -43,16 +43,16 @@ shopt -s histappend
 # Autocorrect typos in path names when using `cd`
 shopt -s cdspell
 
-# Homebrew Shell Completion - https://docs.brew.sh/Shell-Completion
-if type brew 2&>/dev/null; then
-  for completion_file in $(brew --prefix)/etc/bash_completion.d/*; do
-    source "$completion_file"
+HOMEBREW_PREFIX=$(brew --prefix)
+# Homebrew Shell Completion - https://docs.brew.sh/Shell-Completion#configuring-completions-in-bash
+if type brew &>/dev/null; then
+  for COMPLETION in "${HOMEBREW_PREFIX}"/etc/bash_completion.d/*
+  do
+    [[ -f $COMPLETION ]] && source "$COMPLETION"
   done
-fi
-
-# Bash completion
-if which brew &> /dev/null && [ -f $(brew --prefix)/share/bash-completion/bash_completion ]; then
-  source $(brew --prefix)/share/bash-completion/bash_completion
+  if [[ -f ${HOMEBREW_PREFIX}/etc/profile.d/bash_completion.sh ]]; then
+    source "${HOMEBREW_PREFIX}/etc/profile.d/bash_completion.sh"
+  fi
 fi
 
 # terraform completion

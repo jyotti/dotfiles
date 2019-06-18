@@ -1,51 +1,50 @@
 #!/usr/bin/env bash
 
 # openssl
-if [ -d $(brew --prefix)/opt/openssl/bin ]; then
-  PATH="$(brew --prefix)/opt/openssl/bin:$PATH"
-  export LDFLAGS="-L$(brew --prefix)/opt/openssl/lib"
-  export CPPFLAGS="-I$(brew --prefix)/openssl/include"
-  export PKG_CONFIG_PATH="$(brew --prefix)/opt/openssl/lib/pkgconfig"
+if [ -d /usr/local/opt/openssl ]; then
+  export PATH="/usr/local/opt/openssl/bin:$PATH"
+  export LDFLAGS="-L/usr/local/opt/openssl/lib $LDFLAGS"
+  export CPPFLAGS="-I/usr/local/opt/openssl/include $CPPFLAGS"
+  export PKG_CONFIG_PATH="/usr/local/opt/openssl/lib/pkgconfig:$PKG_CONFIG_PATH"
 fi
 
 # coreutils
-if [ -d $(brew --prefix)/opt/coreutils/libexec/gnubin ]; then
-  PATH="$(brew --prefix)/opt/coreutils/libexec/gnubin:$PATH"
-  MANPATH="$(brew --prefix)/opt/coreutils/libexec/gnuman:$MANPATH"
+if [ -d /usr/local/opt/coreutils ]; then
+  export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
+  export MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
 fi
 
 # gnu-tar
-if [ -d $(brew --prefix)/opt/gnu-tar/libexec/gnubin ]; then
-  PATH="$(brew --prefix)/opt/gnu-tar/libexec/gnubin:$PATH"
-  export MANPATH="$(brew --prefix)/opt/gnu-tar/libexec/gnuman:$MANPATH"
+if [ -d /usr/local/opt/gnu-tar ]; then
+  export PATH="/usr/local/opt/gnu-tar/libexec/gnubin:$PATH"
+  export MANPATH="/usr/local/opt/gnu-tar/libexec/gnuman:$MANPATH"
 fi
 
 # findutils
-if [ -d $(brew --prefix)/opt/findutils/libexec/gnubin ]; then
-  PATH="$(brew --prefix)/opt/findutils/libexec/gnubin:$PATH"
-  export MANPATH="$(brew --prefix)/opt/findutils/libexec/gnuman:$MANPATH"
+if [ -d /usr/local/opt/findutils ]; then
+  export PATH="/usr/local/opt/findutils/libexec/gnubin:$PATH"
+  export MANPATH="/usr/local/opt/findutils/libexec/gnuman:$MANPATH"
 fi
 
 # make
-if [ -d $(brew --prefix)/opt/make/libexec/gnubin ]; then
-  PATH="$(brew --prefix)/opt/make/libexec/gnubin:$PATH"
-  export MANPATH="$(brew --prefix)/opt/make/libexec/gnuman:$MANPATH"
+if [ -d /usr/local/opt/make ]; then
+  export PATH="/usr/local/opt/make/libexec/gnubin:$PATH"
+  export MANPATH="/usr/local/opt/make/libexec/gnuman:$MANPATH"
 fi
 
 # unzip
-if [ -d $(brew --prefix)/opt/unzip/bin ]; then
-  PATH="$(brew --prefix)/opt/unzip/bin:$PATH"
+if [ -d /usr/local/opt/unzip ]; then
+  export PATH="/usr/local/opt/unzip/bin:$PATH"
 fi
 
 # curl
-if [ -d $(brew --prefix)/opt/curl/bin ]; then
-  PATH="$(brew --prefix)/opt/curl/bin:$PATH"
+if [ -d /usr/local/opt/curl ]; then
+  export PATH="/usr/local/opt/curl/bin:$PATH"
 fi
 
 # Ruby
-if [ -d $(brew --prefix)/opt/ruby/bin ]; then
-  export PATH="$(brew --prefix)/opt/ruby/bin:$PATH"
-  export LDFLAGS="-L$(brew --prefix)/opt/ruby/lib $LDFLAGS"
-  export CPPFLAGS="-I$(brew --prefix)/opt/ruby/include $CPPFLAGS"
+if [ -d /usr/local/opt/ruby ]; then
+  export PATH="/usr/local/opt/ruby/bin:$PATH"
+  export LDFLAGS="-L/usr/local/opt/ruby/lib $LDFLAGS"
+  export CPPFLAGS="-I/usr/local/opt/ruby/include $CPPFLAGS"
 fi
-

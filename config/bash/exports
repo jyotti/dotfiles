@@ -21,7 +21,7 @@ export LESS_TERMCAP_md="$ORANGE"
 export MANPAGER="less -X"
 
 # pyenv
-if [ -f $(brew --prefix)/bin/pyenv ]; then
+if type pyenv > /dev/null 2>&1; then
   eval "$(pyenv init -)"
 fi
 
@@ -74,6 +74,6 @@ if [ -f "$HOME/.sdkman/bin/sdkman-init.sh" ]; then
 fi
 
 # mysql-client
-if [ -d $(brew --prefix)/opt/mysql-client/bin ]; then
-  PATH="$(brew --prefix)/opt/mysql-client/bin:$PATH"
+if [ -d /usr/local/opt/mysql-client ]; then
+  PATH="/usr/local/opt/mysql-client/bin:$PATH"
 fi
