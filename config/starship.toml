@@ -1,0 +1,6 @@
+# https://starship.rs/config/
+
+add_newline = true
+
+[character]
+#symbol = "➜"

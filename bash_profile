@@ -29,7 +29,7 @@ mkdir -p ${XDG_CACHE_HOME}
 mkdir -p $HOME/dev
 
 # Load the shell dotfiles
-for file in ${XDG_CONFIG_HOME}/bash/{path,functions,bash_prompt,aliases,exports}; do
+for file in ${XDG_CONFIG_HOME}/bash/{path,functions,aliases,exports}; do
   [ -r "$file" ] && [ -f "$file" ] && source "$file"
 done
 unset file
@@ -53,6 +53,10 @@ if type brew &>/dev/null; then
   if [[ -f ${HOMEBREW_PREFIX}/etc/profile.d/bash_completion.sh ]]; then
     source "${HOMEBREW_PREFIX}/etc/profile.d/bash_completion.sh"
   fi
+fi
+
+if type starship &> /dev/null; then
+    eval "$(starship init bash)"
 fi
 
 # terraform completion

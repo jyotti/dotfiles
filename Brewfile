@@ -44,6 +44,7 @@ brew "jq"
 brew "nkf"
 brew "shellcheck"
 brew "gibo"
+brew "starship"
 
 # CLI
 brew "node"
