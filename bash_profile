@@ -55,10 +55,6 @@ if type brew &>/dev/null; then
   fi
 fi
 
-if type starship &> /dev/null; then
-    eval "$(starship init bash)"
-fi
-
 # terraform completion
 if type terraform &> /dev/null; then
     complete -C terraform terraform
