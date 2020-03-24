@@ -33,6 +33,8 @@ brew "git"
 brew "git-now"
 brew "hub"
 brew "tig"
+# https://github.com/cli/cli
+brew "github/gh/gh"
 
 brew "macvim", args: ["with-lua", "with-override-system-vim"]
 brew "tmux"
