@@ -5,7 +5,7 @@ brew "bash"
 
 # Homebrew Python
 brew "python"
-brew "python@2"
+brew "python@3.8"
 
 # Homebrew Ruby
 brew "ruby"
@@ -30,7 +30,6 @@ brew "less"
 
 # Git
 brew "git"
-brew "git-now"
 brew "hub"
 brew "tig"
 # https://github.com/cli/cli
