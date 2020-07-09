@@ -47,11 +47,12 @@ brew "shellcheck"
 brew "gibo"
 brew "starship"
 
-# CLI
+# Dev tools
 brew "node"
 brew "yarn"
+brew "pipenv"
 
-# version managements
+# envs
 brew "pyenv"
 brew "ruby-build"   #depends on rbenv
 brew "rbenv"
@@ -67,9 +68,11 @@ brew "ghq"
 brew "glide"
 brew "peco"
 
-# Module by Homebrew-python
-brew "pipenv"
+# AWS
 brew "awscli"
+brew "aws-cdk"
+
+# More
 brew "ansible"
 
 # Ricty - https://github.com/sanemat/homebrew-font
