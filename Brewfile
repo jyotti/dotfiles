@@ -4,7 +4,6 @@ tap "homebrew/services"
 brew "bash"
 
 # Homebrew Python
-brew "python"
 brew "python@3.8"
 
 # Homebrew Ruby
