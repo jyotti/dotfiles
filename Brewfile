@@ -29,7 +29,6 @@ brew "less"
 
 # Git
 brew "git"
-brew "hub"
 brew "tig"
 # https://github.com/cli/cli
 brew "github/gh/gh"
