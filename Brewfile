@@ -69,6 +69,9 @@ brew "peco"
 # AWS
 brew "awscli"
 brew "aws-cdk"
+# AWS assume role - https://github.com/remind101/assume-role
+tap "remind101/formulae"
+brew "remind101/formulae/assume-role"
 
 # More
 #brew "ansible"
