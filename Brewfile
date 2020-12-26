@@ -30,8 +30,7 @@ brew "less"
 # Git
 brew "git"
 brew "tig"
-# https://github.com/cli/cli
-brew "github/gh/gh"
+brew "gh"
 
 brew "macvim"
 brew "tmux"

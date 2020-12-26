@@ -1,2 +1,0 @@
-#pip2 install -r requirements-python2.txt
-virtualenv
