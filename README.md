@@ -23,26 +23,11 @@ brew bundle
 Install dotfiles
 
 ```bash
-. bootstrap.sh
+bash bootstrap.sh
 ```
 
 ### Python
 
-Use homebrew's python, pyenv when you want to build arbitrary version.
-
-Install Powerline(pip3)
-
 ```bash
 pip3 install -f requirements.txt
 ```
-
-### Python2
-
-Install virtualenv(pip2)
-
-```bash
-pip2 install -f requirements-pip2.txt
-```
-
-## Thanks
-https://github.com/mathiasbynens/dotfiles
