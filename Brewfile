@@ -43,6 +43,7 @@ brew "nkf"
 brew "shellcheck"
 brew "gibo"
 brew "starship"
+brew "asciinema"
 
 # Dev tools
 brew "node"
@@ -84,7 +85,6 @@ brew "remind101/formulae/assume-role"
 brew "bash-completion@2" #for Bash 4.1+
 brew "pip-completion"
 brew "docker-completion"
-brew "docker-machine-completion"
 brew "docker-compose-completion"
 brew "vagrant-completion"
 brew "django-completion"
