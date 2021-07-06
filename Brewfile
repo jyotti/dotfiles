@@ -1,9 +1,8 @@
-tap "homebrew/services"
-
 # Use Bash
 brew "bash"
 
 # Homebrew Python
+brew "python@3.9"
 brew "python@3.8"
 
 # Homebrew Ruby
@@ -50,13 +49,13 @@ brew "node"
 brew "yarn"
 brew "pipenv"
 
-# envs
+# version management
 brew "pyenv"
-brew "ruby-build"   #depends on rbenv
-brew "rbenv"
+# brew "ruby-build"   #depends on rbenv
+# brew "rbenv"
 brew "jenv"
 #brew "plenv"
-brew "node-build"   #depends on nodenv
+# brew "node-build"   #depends on nodenv
 brew "nodenv"
 brew "direnv"
 
@@ -89,3 +88,17 @@ brew "docker-compose-completion"
 brew "vagrant-completion"
 brew "django-completion"
 brew "yarn-completion"
+
+# # Useful applications
+# # https://github.com/sindresorhus/quick-look-plugins
+# cask "qlcolorcode"
+# cask "qlstephen"
+# cask "qlmarkdown"
+# cask "quicklook-json"
+# cask "qlprettypatch"
+# cask "quicklook-csv"
+# cask "qlimagesize"
+# cask "webpquicklook"
+# cask "suspicious-package"
+# cask "quicklookase"
+# cask "qlvideo"
