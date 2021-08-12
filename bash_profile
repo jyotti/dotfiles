@@ -1,19 +1,5 @@
 #!/usr/bin/env bash
 
-# # Add `/usr/local/bin` to the `$PATH`
-# if [ -d "/usr/local/bin" ] ; then
-#   export PATH="/usr/local/bin:$PATH"
-# fi
-# if [ -d "/usr/local/sbin" ] ; then
-#   export PATH="/usr/local/sbin:$PATH"
-# fi
-
-# # Add `~/bin` to the `$PATH`
-# if [ ! -d "$HOME/bin" ] ; then
-#   mkdir "$HOME/bin"
-# fi
-# export PATH="$HOME/bin:$PATH"
-
 # XDG Base Directory Specification
 export XDG_DATA_HOME=$HOME/.local/share
 export XDG_CONFIG_HOME=$HOME/.config
@@ -29,12 +15,11 @@ mkdir -p ${XDG_CACHE_HOME}
 mkdir -p $HOME/dev
 
 # Homebrew
-if [ -x "/opt/homebrew/bin/brew" ] ; then
-  # Apple Silicon
-  eval $(/opt/homebrew/bin/brew shellenv)
-elif [ -x "/usr/local/homebrew/bin/brew" ] ; then
-  # Intel
-  eval $(/usr/local/homebrew/bin/brew shellenv)
+ARCH=$(uname -m)
+if [[ $ARCH == "arm64" ]]; then
+  [[ -x "/opt/homebrew/bin/brew" ]] && eval $(/opt/homebrew/bin/brew shellenv)
+elif [[ $ARCH == "x86_64" ]]; then
+  [[ -x "/usr/local/bin/brew" ]] && eval $(/usr/local/bin/brew shellenv)
 fi
 
 # Load the shell dotfiles
