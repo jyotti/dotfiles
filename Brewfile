@@ -2,11 +2,16 @@
 brew "bash"
 
 # Homebrew Python
+brew "python@3.10"
 brew "python@3.9"
 brew "python@3.8"
 
 # Homebrew Ruby
 brew "ruby"
+
+# Homebrew PHP
+brew "php"
+brew "php@7.4"
 
 # GNU File, Shell, and Text utilities
 brew "coreutils"
@@ -57,6 +62,7 @@ brew "jenv"
 #brew "plenv"
 # brew "node-build"   #depends on nodenv
 brew "nodenv"
+brew "tfenv"
 brew "direnv"
 
 # Go
@@ -72,9 +78,6 @@ brew "aws-cdk"
 tap "remind101/formulae"
 brew "remind101/formulae/assume-role"
 
-# More
-#brew "ansible"
-
 ## Ricty - https://github.com/sanemat/homebrew-font
 #tap "sanemat/font"
 #brew "fontforge"
@@ -84,21 +87,16 @@ brew "remind101/formulae/assume-role"
 brew "bash-completion@2" #for Bash 4.1+
 brew "pip-completion"
 brew "docker-completion"
-brew "docker-compose-completion"
 brew "vagrant-completion"
 brew "django-completion"
 brew "yarn-completion"
 
-# # Useful applications
-# # https://github.com/sindresorhus/quick-look-plugins
-# cask "qlcolorcode"
-# cask "qlstephen"
-# cask "qlmarkdown"
-# cask "quicklook-json"
-# cask "qlprettypatch"
-# cask "quicklook-csv"
-# cask "qlimagesize"
-# cask "webpquicklook"
-# cask "suspicious-package"
-# cask "quicklookase"
-# cask "qlvideo"
+#======================================
+# cask
+#======================================
+cask "docker"
+cask "discord"
+cask "paw"
+cask "inkdrop"
+cask "drawio"
+cask "aws-vault"
