@@ -5,14 +5,14 @@ repo = 'Shougo/dein.vim'
 repo = 'Shougo/vimproc.vim'
 build = 'make'
 
-[[plugins]]
-repo = 'powerline/powerline'
-rtp = 'powerline/bindings/vim'
-hook_add = '''
-  " doc - https://powerline.readthedocs.io/en/master/tips-and-tricks.html
-  let s:powerline_vim = CacheHome() . '/dein/repos/github.com/powerline/bindings/vim'
-  set rtp+=s:powerline_vim
-'''
+#[[plugins]]
+#repo = 'powerline/powerline'
+#rtp = 'powerline/bindings/vim'
+#hook_add = '''
+#  " doc - https://powerline.readthedocs.io/en/master/tips-and-tricks.html
+#  let s:powerline_vim = CacheHome() . '/dein/repos/github.com/powerline/bindings/vim'
+#  set rtp+=s:powerline_vim
+#'''
 
 [[plugins]]
 repo = 'altercation/vim-colors-solarized'
