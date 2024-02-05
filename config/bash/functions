@@ -1,14 +1,1 @@
 #!/usr/bin/env bash
-
-function assume-role {
-  if which assume-role &> /dev/null; then
-    eval $( $(which assume-role) $@);
-  fi
-}
-
-function assume-role-unset {
-  unset AWS_SECRET_ACCESS_KEY
-  unset AWS_SESSION_TOKEN
-  unset AWS_ACCESS_KEY_ID
-  unset AWS_SECURITY_TOKEN
-}

@@ -35,6 +35,6 @@ git config --global filter.lfs.smudge "git-lfs smudge -- %f"
 git config --global filter.lfs.required true
 git config --global filter.lfs.process "git-lfs filter-process"
 
-git config --global --replace-all url.git@github.com:.pushInsteadOf "https://github.com/" "git://github.com/"
+# git config --global --replace-all url.git@github.com:.pushInsteadOf "https://github.com/" "git://github.com/"
 
 git config --global ghq.root "~/dev/src"

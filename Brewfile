@@ -2,6 +2,7 @@
 brew "bash"
 
 # Homebrew Python
+brew "python@3.11"
 brew "python@3.10"
 brew "python@3.9"
 brew "python@3.8"
@@ -11,7 +12,9 @@ brew "ruby"
 
 # Homebrew PHP
 brew "php"
-brew "php@7.4"
+
+# Homebrew Go
+brew "go"
 
 # GNU File, Shell, and Text utilities
 brew "coreutils"
@@ -52,31 +55,22 @@ brew "asciinema"
 # Dev tools
 brew "node"
 brew "yarn"
+brew "poetry"
 brew "pipenv"
+brew "httpie"
+brew "ghq"
+brew "peco"
 
 # version management
-brew "pyenv"
-# brew "ruby-build"   #depends on rbenv
-# brew "rbenv"
+# brew "pyenv"
 brew "jenv"
-#brew "plenv"
-# brew "node-build"   #depends on nodenv
 brew "nodenv"
 brew "tfenv"
 brew "direnv"
 
-# Go
-brew "go"
-brew "ghq"
-#brew "glide"
-brew "peco"
-
 # AWS
 brew "awscli"
 brew "aws-cdk"
-# AWS assume role - https://github.com/remind101/assume-role
-tap "remind101/formulae"
-brew "remind101/formulae/assume-role"
 
 ## Ricty - https://github.com/sanemat/homebrew-font
 #tap "sanemat/font"
@@ -87,16 +81,11 @@ brew "remind101/formulae/assume-role"
 brew "bash-completion@2" #for Bash 4.1+
 brew "pip-completion"
 brew "docker-completion"
-brew "vagrant-completion"
 brew "django-completion"
 brew "yarn-completion"
 
 #======================================
 # cask
 #======================================
-cask "docker"
-cask "discord"
-cask "paw"
-cask "inkdrop"
 cask "drawio"
 cask "aws-vault"

@@ -12,7 +12,7 @@ mkdir -p ${XDG_DATA_HOME}
 mkdir -p ${XDG_CONFIG_HOME}
 mkdir -p ${XDG_CACHE_HOME}
 # Development HOME
-mkdir -p $HOME/dev
+mkdir -p $HOME/dev/bin
 
 # Homebrew
 ARCH=$(uname -m)
@@ -38,17 +38,16 @@ shopt -s histappend
 shopt -s cdspell
 
 # Homebrew Shell Completion - https://docs.brew.sh/Shell-Completion#configuring-completions-in-bash
-if type brew &>/dev/null; then
-  if [[ -r "${HOMEBREW_PREFIX}/etc/profile.d/bash_completion.sh" ]]; then
+if type brew &>/dev/null
+then
+  HOMEBREW_PREFIX="$(brew --prefix)"
+  if [[ -r "${HOMEBREW_PREFIX}/etc/profile.d/bash_completion.sh" ]]
+  then
     source "${HOMEBREW_PREFIX}/etc/profile.d/bash_completion.sh"
   else
-    for COMPLETION in "${HOMEBREW_PREFIX}/etc/bash_completion.d/"*; do
-      [[ -r "$COMPLETION" ]] && source "$COMPLETION"
+    for COMPLETION in "${HOMEBREW_PREFIX}/etc/bash_completion.d/"*
+    do
+      [[ -r "${COMPLETION}" ]] && source "${COMPLETION}"
     done
   fi
-fi
-
-# terraform completion
-if type terraform &> /dev/null; then
-    complete -C terraform terraform
 fi
