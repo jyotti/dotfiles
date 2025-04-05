@@ -25,9 +25,3 @@ Install dotfiles
 ```bash
 bash bootstrap.sh
 ```
-
-### Python
-
-```bash
-pip3 install -f requirements.txt
-```

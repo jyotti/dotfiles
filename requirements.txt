@@ -1,5 +1,0 @@
-powerline-status
-psutil
-pylint
-rope
-mypy
