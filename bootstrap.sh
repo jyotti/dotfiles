@@ -23,7 +23,6 @@ dotfiles=(
   bash_profile
   inputrc
   vimrc
-  tmux.conf
 )
 
 echo -e "\n=====> Copy dotfiles to HOME ..."

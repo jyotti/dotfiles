@@ -40,8 +40,6 @@ brew "tig"
 brew "gh"
 
 brew "macvim"
-brew "tmux"
-brew "reattach-to-user-namespace"
 
 # Useful tools
 brew "the_silver_searcher"
