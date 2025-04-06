@@ -11,3 +11,14 @@ set visible-stats on
 set input-meta on
 set output-meta on
 set convert-meta off
+
+# history
+"\e[A": history-search-backward
+"\e[B": history-search-forward
+
+# マウスサポート
+set enable-keypad on
+# ベル音を鳴らさない
+set bell-style none
+# 補完候補の色をつける
+set colored-stats on

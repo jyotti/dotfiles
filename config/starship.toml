@@ -4,3 +4,11 @@ add_newline = true
 
 [character]
 #symbol = "➜"
+
+# [aws]
+# format = 'on [$symbol($profile )(\($region\) )]($style)'
+# style = 'bold blue'
+# symbol = '🅰 '
+# [aws.region_aliases]
+# ap-northeast-1 = 'tokyo'
+# us-east-1 = 'va'

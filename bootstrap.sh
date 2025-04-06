@@ -22,7 +22,6 @@ dotfiles=(
   bashrc
   bash_profile
   inputrc
-  vimrc
 )
 
 echo -e "\n=====> Copy dotfiles to HOME ..."
