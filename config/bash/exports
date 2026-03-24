@@ -14,46 +14,8 @@ export HISTIGNORE="ls:cd:cd -:pwd:exit:date:* --help"
 export LANG="en_US"
 export LC_ALL="en_US.UTF-8"
 
-# Highlight section titles in manual pages
-export LESS_TERMCAP_md="$ORANGE"
-
 # Don’t clear the screen after quitting a manual page
 export MANPAGER="less -X"
-
-# pyenv
-if type pyenv > /dev/null 2>&1; then
-  export PYENV_ROOT=${HOMEBREW_PREFIX}/var/pyenv
-  ### Disable pyenv PATH ###
-  # export PATH="$PYENV_ROOT/shims:$PATH"
-  eval "$(pyenv init -)"
-fi
-
-# Pipenv
-export PIPENV_VENV_IN_PROJECT=true
-
-# # rbenv
-# if type rbenv > /dev/null 2>&1; then
-#   export RBENV_ROOT=/usr/local/var/rbenv
-#   eval "$(rbenv init -)"
-# fi
-
-# jenv
-if type jenv > /dev/null 2>&1; then
-  export JENV_ROOT=${HOMEBREW_PREFIX}/var/jenv
-  eval "$(jenv init -)"
-fi
-
-# # plenv
-# if type plenv > /dev/null 2>&1; then
-#   export PLENV_ROOT=/usr/local/opt/plenv
-#   eval "$(plenv init -)"
-# fi
-
-# nodenv
-if type nodenv > /dev/null 2>&1; then
-  export NODENV_ROOT=${HOMEBREW_PREFIX}/var/nodenv
-  eval "$(nodenv init -)"
-fi
 
 # starship - https://starship.rs/
 # Set before direnv
@@ -65,19 +27,3 @@ fi
 if type direnv > /dev/null 2>&1; then
   eval "$(direnv hook bash)"
 fi
-
-# Android-SDK
-# export ANDROID_SDK_ROOT=/usr/local/share/android-sdk
-# if [ -d "/usr/local/share/android-sdk" ]; then
-#   export ANDROID_SDK_ROOT=/usr/local/share/android-sdk
-# fi
-
-# Go lang
-export GOPATH=$HOME/dev
-export PATH=$PATH:$GOPATH/bin
-
-# # sdkman
-# if [ -f "$HOME/.sdkman/bin/sdkman-init.sh" ]; then
-#   export SDKMAN_DIR="$HOME/.sdkman"
-#   . "$HOME/.sdkman/bin/sdkman-init.sh"
-# fi

@@ -12,10 +12,11 @@ alias -- -="cd -"
 
 if ls --color > /dev/null 2>&1; then # GNU `ls`
   colorflag="--color"
-  ### https://github.com/seebi/dircolors-solarized
-  if [[ -f "${XDG_CONFIG_HOME}/dir_colors/dircolors.ansi-dark" ]]; then
-    eval $(dircolors "${XDG_CONFIG_HOME}/dir_colors/dircolors.ansi-dark")
-  fi
+  # dircolors is currently disabled to keep shell setup simple.
+  # To re-enable:
+  # if [[ -f "${XDG_CONFIG_HOME}/dir_colors/dircolors.ansi-dark" ]]; then
+  #   eval $(dircolors "${XDG_CONFIG_HOME}/dir_colors/dircolors.ansi-dark")
+  # fi
 else # BSD `ls`
   colorflag="-G"
 fi
@@ -32,13 +33,6 @@ alias lsd='ls -lFh ${colorflag} | grep "^d"'
 # Always use color output for `ls`
 alias ls="command ls ${colorflag}"
 
-# Always enable colored `grep` output
-# Note: GREP_OPTIONS is deprecated; please use an alias or script
-alias grep="grep --color=auto"
-
 # ghq + peco - http://qiita.com/itkrt2y/items/0671d1f48e66f21241e2
 alias ghql='cd $(ghq root)/$(ghq list | peco)'
 alias ghqr='gh browse --repo $(ghq list | peco | cut -d "/" -f 2,3)'
-
-alias x64='exec arch -arch x86_64 /bin/bash --login'
-alias arm='exec arch -arch arm64e /bin/bash --login'

@@ -1,0 +1,20 @@
+# theme
+theme = tokyonight
+
+# fonts
+font-family = UDEV Gothic
+font-family = Menlo
+font-family = BIZ UDGothic
+font-size = 14
+font-feature = -dlig
+
+# 背景透過
+background-opacity = 0.85
+background-blur-radius = 20
+
+# 非アクティブペインを暗くしてアクティブを際立たせる
+unfocused-split-opacity = 0.85
+
+# for macOS
+macos-titlebar-style = tabs
+macos-option-as-alt = true

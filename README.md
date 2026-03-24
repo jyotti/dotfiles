@@ -1,27 +1,19 @@
 # dotfiles
 
-## Overview
+Personal dotfiles for macOS.
 
-- Shell: Bash
-- Terminal: tmux, [Powerline](https://github.com/powerline/powerline)
-
-## Installation
-
-### Prerequisites
-
-- Command Line Tools (CLT) for Xcode `xcode-select --install`
-- [Homebrew](https://brew.sh/)
-
-### Install formula and dotfiles
-
-Install formula with Hombrew-bundle
+## Setup
 
 ```bash
+xcode-select --install
 brew bundle
+bash bootstrap.sh
 ```
 
-Install dotfiles
+## Git Config
 
 ```bash
-bash bootstrap.sh
+GIT_USER_NAME="Your Name" \
+GIT_USER_EMAIL="you@example.com" \
+bash gitconfig.sh
 ```

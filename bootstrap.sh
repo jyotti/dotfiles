@@ -1,12 +1,13 @@
 #!/usr/bin/env bash
 
-cd "$(dirname "$BASH_SOURCE")" || exit 1
+SCRIPT_PATH="${BASH_SOURCE[0]}"
+cd "$(dirname "$SCRIPT_PATH")" || exit 1
 
 cat << EOF
         ∧__∧
       （  ´∀｀）
       (  O┬O
-≡◎-ヽJ┴◎     ---${BASH_SOURCE}---
+≡◎-ヽJ┴◎     ---${SCRIPT_PATH}---
 
 EOF
 
