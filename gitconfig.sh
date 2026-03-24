@@ -1,8 +1,12 @@
 #!/usr/bin/env bash
 
 # user
-git config --global user.name "Atsushi Nakajo"
-git config --global user.email "jyotti@gmail.com"
+if [[ -n "${GIT_USER_NAME:-}" ]]; then
+  git config --global user.name "${GIT_USER_NAME}"
+fi
+if [[ -n "${GIT_USER_EMAIL:-}" ]]; then
+  git config --global user.email "${GIT_USER_EMAIL}"
+fi
 
 git config --global credential.helper osxkeychain
 
@@ -23,16 +27,11 @@ git config --global color.ui true
 git config --global merge.tool vimdiff
 git config --global merge.ff true
 
-git config --global push.default upstream
+git config --global push.default simple
 git config --global pull.rebase true
 
 git config --global alias.s "status"
 # statusをコンパクトに
 git config --global alias.ss "status --short --branch"
 
-git config --global filter.lfs.clean "git-lfs clean -- %f"
-git config --global filter.lfs.smudge "git-lfs smudge -- %f"
-git config --global filter.lfs.required true
-git config --global filter.lfs.process "git-lfs filter-process"
-
-git config --global ghq.root "~/dev/src"
+git config --global ghq.root "$HOME/dev/src"
