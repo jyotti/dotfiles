@@ -6,22 +6,10 @@ if [ -d ${HOMEBREW_PREFIX}/opt/coreutils ]; then
   export MANPATH="${HOMEBREW_PREFIX}/opt/coreutils/libexec/gnuman:$MANPATH"
 fi
 
-# gnu-tar
-if [ -d ${HOMEBREW_PREFIX}/opt/gnu-tar ]; then
-  export PATH="${HOMEBREW_PREFIX}/opt/gnu-tar/libexec/gnubin:$PATH"
-  export MANPATH="${HOMEBREW_PREFIX}/opt/gnu-tar/libexec/gnuman:$MANPATH"
-fi
-
 # findutils
 if [ -d ${HOMEBREW_PREFIX}/opt/findutils ]; then
   export PATH="${HOMEBREW_PREFIX}/opt/findutils/libexec/gnubin:$PATH"
   export MANPATH="${HOMEBREW_PREFIX}/opt/findutils/libexec/gnuman:$MANPATH"
-fi
-
-# make
-if [ -d ${HOMEBREW_PREFIX}/opt/make ]; then
-  export PATH="${HOMEBREW_PREFIX}/opt/make/libexec/gnubin:$PATH"
-  export MANPATH="${HOMEBREW_PREFIX}/opt/make/libexec/gnuman:$MANPATH"
 fi
 
 # unzip
@@ -32,11 +20,4 @@ fi
 # curl
 if [ -d ${HOMEBREW_PREFIX}/opt/curl ]; then
   export PATH="${HOMEBREW_PREFIX}/opt/curl/bin:$PATH"
-fi
-
-# Ruby
-if [ -d ${HOMEBREW_PREFIX}/opt/ruby ]; then
-  export PATH="${HOMEBREW_PREFIX}/opt/ruby/bin:$PATH"
-  export LDFLAGS="-L${HOMEBREW_PREFIX}/opt/ruby/lib $LDFLAGS"
-  export CPPFLAGS="-I${HOMEBREW_PREFIX}/opt/ruby/include $CPPFLAGS"
 fi
