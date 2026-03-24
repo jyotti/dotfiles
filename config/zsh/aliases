@@ -1,0 +1,25 @@
+#!/usr/bin/env zsh
+
+# Easier navigation
+alias ..="cd .."
+alias ...="cd ../.."
+alias ....="cd ../../.."
+alias .....="cd ../../../.."
+alias ~="cd ~"
+alias -- -="cd -"
+
+# ls color option by platform
+if ls --color >/dev/null 2>&1; then
+  colorflag="--color"
+else
+  colorflag="-G"
+fi
+
+alias l="ls -lFh ${colorflag}"
+alias la="ls -laFh ${colorflag}"
+alias lsd='ls -lFh ${colorflag} | grep "^d"'
+alias ls="command ls ${colorflag}"
+
+# ghq + peco
+alias ghql='cd $(ghq root)/$(ghq list | peco)'
+alias ghqr='gh browse --repo $(ghq list | peco | cut -d "/" -f 2,3)'

@@ -1,0 +1,23 @@
+#!/usr/bin/env zsh
+
+# coreutils
+if [[ -d "${HOMEBREW_PREFIX}/opt/coreutils" ]]; then
+  export PATH="${HOMEBREW_PREFIX}/opt/coreutils/libexec/gnubin:$PATH"
+  export MANPATH="${HOMEBREW_PREFIX}/opt/coreutils/libexec/gnuman:$MANPATH"
+fi
+
+# findutils (optional)
+# if [[ -d "${HOMEBREW_PREFIX}/opt/findutils" ]]; then
+#   export PATH="${HOMEBREW_PREFIX}/opt/findutils/libexec/gnubin:$PATH"
+#   export MANPATH="${HOMEBREW_PREFIX}/opt/findutils/libexec/gnuman:$MANPATH"
+# fi
+
+# unzip
+if [[ -d "${HOMEBREW_PREFIX}/opt/unzip" ]]; then
+  export PATH="${HOMEBREW_PREFIX}/opt/unzip/bin:$PATH"
+fi
+
+# curl
+if [[ -d "${HOMEBREW_PREFIX}/opt/curl" ]]; then
+  export PATH="${HOMEBREW_PREFIX}/opt/curl/bin:$PATH"
+fi

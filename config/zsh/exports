@@ -1,0 +1,27 @@
+#!/usr/bin/env zsh
+
+export EDITOR="vim"
+
+# History
+export HISTSIZE=32768
+export SAVEHIST=32768
+export HISTFILE="$HOME/.zsh_history"
+setopt HIST_IGNORE_DUPS
+setopt SHARE_HISTORY
+
+# Locale
+export LANG="en_US"
+export LC_ALL="en_US.UTF-8"
+
+# Pager
+export MANPAGER="less -X"
+
+# starship
+if command -v starship >/dev/null 2>&1; then
+  eval "$(starship init zsh)"
+fi
+
+# direnv
+if command -v direnv >/dev/null 2>&1; then
+  eval "$(direnv hook zsh)"
+fi

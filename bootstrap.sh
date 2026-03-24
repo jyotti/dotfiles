@@ -20,6 +20,8 @@ if [[ ! "$1" == "--force" ]] && [[ ! "$1" == "-f" ]]; then
 fi
 
 dotfiles=(
+  zshrc
+  zprofile
   bashrc
   bash_profile
   inputrc

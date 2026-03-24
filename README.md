@@ -2,6 +2,8 @@
 
 Personal dotfiles for macOS.
 
+Default shell: zsh
+
 ## Setup
 
 ```bash
