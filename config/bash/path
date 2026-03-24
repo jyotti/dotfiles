@@ -1,13 +1,5 @@
 #!/usr/bin/env bash
 
-# openssl
-if [ -d ${HOMEBREW_PREFIX}/opt/openssl ]; then
-  export PATH="${HOMEBREW_PREFIX}/opt/openssl@1.1/bin:$PATH"
-  export LDFLAGS="-L${HOMEBREW_PREFIX}/opt/openssl@1.1l/lib $LDFLAGS"
-  export CPPFLAGS="-I${HOMEBREW_PREFIX}/opt/openssl@1.1/include $CPPFLAGS"
-  export PKG_CONFIG_PATH="${HOMEBREW_PREFIX}/opt/openssl@1.1/lib/pkgconfig:$PKG_CONFIG_PATH"
-fi
-
 # coreutils
 if [ -d ${HOMEBREW_PREFIX}/opt/coreutils ]; then
   export PATH="${HOMEBREW_PREFIX}/opt/coreutils/libexec/gnubin:$PATH"

@@ -27,7 +27,7 @@ set formatoptions-=ro     " コメントの自動挿入は不要
 " コマンドラインの高さ
 set cmdheight=2
 
-" --- powerlineを想定した設定 ---
+" --- ステータスライン/タブライン表示 ---
 " ステータス行を常に表示する
 set laststatus=2
 " タブの表示

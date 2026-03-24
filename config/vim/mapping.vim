@@ -22,7 +22,7 @@ nnoremap sj <C-w>j      "下へ
 nnoremap sk <C-w>k      "上へ
 nnoremap sl <C-w>l      "右へ
 nnoremap sw <C-w>w      "次のwindowへ
-
+ 
 "windowの移動
 nnoremap sH <C-w>H
 nnoremap sJ <C-w>J
@@ -42,4 +42,4 @@ nnoremap sp gT          "前のタブ
 
 "close
 nnoremap sq :<C-u>q<CR>
-nnoremap sQ :<C-u>bd<CR
+nnoremap sQ :<C-u>bd<CR>

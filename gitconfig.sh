@@ -23,7 +23,7 @@ git config --global color.ui true
 git config --global merge.tool vimdiff
 git config --global merge.ff true
 
-git config --global push.defalut upstream
+git config --global push.default upstream
 git config --global pull.rebase true
 
 git config --global alias.s "status"
