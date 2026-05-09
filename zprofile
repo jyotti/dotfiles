@@ -10,6 +10,7 @@ mkdir -p "$XDG_CONFIG_HOME" "$XDG_CACHE_HOME" "$XDG_DATA_HOME" "$XDG_STATE_HOME"
 
 # Development HOME
 mkdir -p "$HOME/dev/bin"
+mkdir -p "$HOME/dev/src"
 
 # Homebrew (Apple Silicon)
 [[ -x "/opt/homebrew/bin/brew" ]] && eval "$(/opt/homebrew/bin/brew shellenv)"

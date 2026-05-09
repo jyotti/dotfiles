@@ -14,6 +14,7 @@ mkdir -p ${XDG_STATE_HOME}
 
 # Development HOME
 mkdir -p $HOME/dev/bin
+mkdir -p $HOME/dev/src
 
 # Homebrew (Apple Silicon)
 [[ -x "/opt/homebrew/bin/brew" ]] && eval "$(/opt/homebrew/bin/brew shellenv)"

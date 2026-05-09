@@ -5,10 +5,9 @@ add_newline = true
 [character]
 #symbol = "➜"
 
-# [aws]
-# format = 'on [$symbol($profile )(\($region\) )]($style)'
-# style = 'bold blue'
-# symbol = '🅰 '
-# [aws.region_aliases]
-# ap-northeast-1 = 'tokyo'
-# us-east-1 = 'va'
+[shell]
+disabled = false
+format = "[$indicator]($style) "
+bash_indicator = "bash"
+zsh_indicator = "zsh"
+style = "bold yellow"
