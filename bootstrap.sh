@@ -35,5 +35,3 @@ done
 echo -e "\n=====> Copy other files to XDG_CONFIG_HOME ..."
 mkdir -p "${HOME}"/.config
 cp -rv config/*      "${HOME}"/.config/
-
-exec $SHELL
