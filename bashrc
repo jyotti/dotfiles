@@ -12,6 +12,11 @@ for file in ${XDG_CONFIG_HOME}/bash/{path,functions,aliases,exports}; do
 done
 unset file
 
+# Machine-local overrides. Keep this file outside the dotfiles repo.
+if [ -r "${XDG_CONFIG_HOME}/bash/local" ] && [ -f "${XDG_CONFIG_HOME}/bash/local" ]; then
+  source "${XDG_CONFIG_HOME}/bash/local"
+fi
+
 # Bash behavior.
 shopt -s nocaseglob
 shopt -s histappend

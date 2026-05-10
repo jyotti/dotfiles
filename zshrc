@@ -12,6 +12,11 @@ for file in "$XDG_CONFIG_HOME"/zsh/{path,functions,aliases,exports}; do
 done
 unset file
 
+# Machine-local overrides. Keep this file outside the dotfiles repo.
+if [[ -r "$XDG_CONFIG_HOME/zsh/local" && -f "$XDG_CONFIG_HOME/zsh/local" ]]; then
+  source "$XDG_CONFIG_HOME/zsh/local"
+fi
+
 # Completion.
 autoload -Uz compinit
 compinit
