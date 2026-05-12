@@ -8,12 +8,10 @@ if [[ -n "${GIT_USER_EMAIL:-}" ]]; then
   git config --global user.email "${GIT_USER_EMAIL}"
 fi
 
-git config --global credential.helper osxkeychain
-
 # core
 git config --global core.editor vim
 # $XDG_CONFIG_HOME/git/ignore
-# git config --global core.excludesfile ~/.gitignore
+git config --global core.excludesfile "$HOME/.config/git/ignore"
 git config --global core.precomposeUnicode true
 git config --global core.autocrlf input
 
